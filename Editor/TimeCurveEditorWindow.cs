@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using U.Motion;
 
+#if UNITY_EDITOR
 
 public class TimeCurveEditorWindow : EditorWindow
 {
@@ -43,3 +44,6 @@ public class TimeCurveEditorWindow : EditorWindow
     }
 
 }
+
+
+#endif

@@ -9,8 +9,8 @@ using UnityEngine;
 namespace U.Motion
 {
 
-    // Provada
 
+#if UNITY_EDITOR
 
     public class TweenAnimatorCoreInspectorExtension : Editor
     {
@@ -43,4 +43,7 @@ namespace U.Motion
 
         }
     }
+
+#endif
+
 }
