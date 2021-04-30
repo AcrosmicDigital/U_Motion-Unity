@@ -23,7 +23,7 @@ namespace U.Motion
 
             animator.Set(
                 animate,
-                new IntKeysCurve(keyFrames, keysCurveMode),
+                new IntKeyFramesCurve(keyFrames, keysCurveMode),
                 animationParams
                 );
 

@@ -4,10 +4,12 @@ using UnityEngine;
 using U.Motion;
 using System.Linq;
 
-public class TransformScaleTween : MonoBehaviour
+public class TweenTransform : MonoBehaviour
 {
-    public Transform t;
-    [Space(20)]
+    [Space(10)]
+    public Transform Transform;
+
+    [Header("Position")]
     public bool tweenPosition = false;
     public bool positionX = false;
     public bool positionY = false;
@@ -17,7 +19,8 @@ public class TransformScaleTween : MonoBehaviour
     public Utween.KeyValueFloat[] positionKeyValuePairsA;
     public TimeAnimationParams positionAnimationParams;
     public Utween.KeysCurveMode positionKeysCurveMode;
-    [Space(20)]
+
+    [Header("Rotation")]
     public bool tweenRotation = false;
     public bool rotationX = false;
     public bool rotationY = false;
@@ -27,21 +30,24 @@ public class TransformScaleTween : MonoBehaviour
     public Utween.KeyValueFloat[] rotationKeyValuePairsA;
     public TimeAnimationParams rotationAnimationParams;
     public Utween.KeysCurveMode rotationKeysCurveMode;
-    [Space(20)]
+
+    [Header("Scale")]
     public bool tweenScale = false;
     public bool scaleX = false;
     public bool scaleY = false;
     public bool scaleZ = false;
-    public Utween.KeyValueVector3[] keyValuePairsABC;
-    public Utween.KeyValueVector2[] keyValuePairsAB;
-    public Utween.KeyValueFloat[] keyValuePairsA;
-    public TimeAnimationParams animationParams;
-    public Utween.KeysCurveMode keysCurveMode;
+    public Utween.KeyValueVector3[] scaleKeyValuePairsABC;
+    public Utween.KeyValueVector2[] scaleKeyValuePairsAB;
+    public Utween.KeyValueFloat[] scaleKeyValuePairsA;
+    public TimeAnimationParams scaleAnimationParams;
+    public Utween.KeysCurveMode scaleKeysCurveMode;
 
 
     void Start()
     {
-        if (t == null) t = transform;
+        if (Transform == null) Transform = transform;
+
+        if (transform == null) return;
         
 
 
@@ -50,8 +56,8 @@ public class TransformScaleTween : MonoBehaviour
             if (positionX && !positionY && !positionZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (x) => t.position = new Vector3(x, t.position.y, t.position.z),
+                    Transform.gameObject,
+                    (x) => Transform.position = new Vector3(x, Transform.position.y, Transform.position.z),
                     positionKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
                     positionAnimationParams,
                     positionKeysCurveMode
@@ -60,8 +66,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (!positionX && positionY && !positionZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (y) => t.position = new Vector3(t.position.x, y, t.position.z),
+                    Transform.gameObject,
+                    (y) => Transform.position = new Vector3(Transform.position.x, y, Transform.position.z),
                     positionKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
                     positionAnimationParams,
                     positionKeysCurveMode
@@ -70,8 +76,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (!positionX && !positionY && positionZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (z) => t.position = new Vector3(t.position.x, t.position.y, z),
+                    Transform.gameObject,
+                    (z) => Transform.position = new Vector3(Transform.position.x, Transform.position.y, z),
                     positionKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
                     positionAnimationParams,
                     positionKeysCurveMode
@@ -81,8 +87,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (positionX && positionY && !positionZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (x, y) => t.position = new Vector3(x, y, t.position.z),
+                    Transform.gameObject,
+                    (x, y) => Transform.position = new Vector3(x, y, Transform.position.z),
                     positionKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
                     positionAnimationParams,
                     positionKeysCurveMode
@@ -91,8 +97,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (positionX && !positionY && positionZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (x, z) => t.position = new Vector3(x, t.position.y, z),
+                    Transform.gameObject,
+                    (x, z) => Transform.position = new Vector3(x, Transform.position.y, z),
                     positionKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
                     positionAnimationParams,
                     positionKeysCurveMode
@@ -101,8 +107,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (!positionX && positionY && positionZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (y, z) => t.position = new Vector3(t.position.x, y, z),
+                    Transform.gameObject,
+                    (y, z) => Transform.position = new Vector3(Transform.position.x, y, z),
                     positionKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
                     positionAnimationParams,
                     positionKeysCurveMode
@@ -112,8 +118,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (positionX && positionY && positionZ)
             {
                 Utween.AnimateVector3(
-                    gameObject,
-                    (x, y, z) => t.position = new Vector3(x, y, z),
+                    Transform.gameObject,
+                    (x, y, z) => Transform.position = new Vector3(x, y, z),
                     positionKeyValuePairsABC.ToDictionary(k => k.key, v => v.value),
                     positionAnimationParams,
                     positionKeysCurveMode
@@ -129,8 +135,8 @@ public class TransformScaleTween : MonoBehaviour
             if (rotationX && !rotationY && !rotationZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (x) => t.rotation = Quaternion.Euler(x, t.rotation.eulerAngles.y, t.rotation.eulerAngles.z),
+                    Transform.gameObject,
+                    (x) => Transform.rotation = Quaternion.Euler(x, Transform.rotation.eulerAngles.y, Transform.rotation.eulerAngles.z),
                     rotationKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
                     rotationAnimationParams,
                     rotationKeysCurveMode
@@ -139,8 +145,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (!rotationX && rotationY && !rotationZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (y) => t.rotation = Quaternion.Euler(t.rotation.eulerAngles.x, y, t.rotation.eulerAngles.z),
+                    Transform.gameObject,
+                    (y) => Transform.rotation = Quaternion.Euler(Transform.rotation.eulerAngles.x, y, Transform.rotation.eulerAngles.z),
                     rotationKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
                     rotationAnimationParams,
                     rotationKeysCurveMode
@@ -149,8 +155,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (!rotationX && !rotationY && rotationZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (z) => t.rotation = Quaternion.Euler(t.rotation.eulerAngles.x, t.rotation.eulerAngles.y, z),
+                    Transform.gameObject,
+                    (z) => Transform.rotation = Quaternion.Euler(Transform.rotation.eulerAngles.x, Transform.rotation.eulerAngles.y, z),
                     rotationKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
                     rotationAnimationParams,
                     rotationKeysCurveMode
@@ -160,8 +166,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (rotationX && rotationY && !rotationZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (x, y) => Quaternion.Euler(t.rotation.eulerAngles.x, y, t.rotation.eulerAngles.z),
+                    Transform.gameObject,
+                    (x, y) => Quaternion.Euler(Transform.rotation.eulerAngles.x, y, Transform.rotation.eulerAngles.z),
                     rotationKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
                     rotationAnimationParams,
                     rotationKeysCurveMode
@@ -170,8 +176,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (rotationX && !rotationY && rotationZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (x, z) => t.rotation = Quaternion.Euler(x, t.rotation.eulerAngles.y, z),
+                    Transform.gameObject,
+                    (x, z) => Transform.rotation = Quaternion.Euler(x, Transform.rotation.eulerAngles.y, z),
                     rotationKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
                     rotationAnimationParams,
                     rotationKeysCurveMode
@@ -180,8 +186,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (!rotationX && rotationY && rotationZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (y, z) => t.rotation = Quaternion.Euler(t.rotation.eulerAngles.x, y, z),
+                    Transform.gameObject,
+                    (y, z) => Transform.rotation = Quaternion.Euler(Transform.rotation.eulerAngles.x, y, z),
                     rotationKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
                     rotationAnimationParams,
                     rotationKeysCurveMode
@@ -191,8 +197,8 @@ public class TransformScaleTween : MonoBehaviour
             else if (rotationX && rotationY && rotationZ)
             {
                 Utween.AnimateVector3(
-                    gameObject,
-                    (x, y, z) => t.rotation = Quaternion.Euler(x,y,z),
+                    Transform.gameObject,
+                    (x, y, z) => Transform.rotation = Quaternion.Euler(x,y,z),
                     rotationKeyValuePairsABC.ToDictionary(k => k.key, v => v.value),
                     rotationAnimationParams,
                     rotationKeysCurveMode
@@ -208,73 +214,73 @@ public class TransformScaleTween : MonoBehaviour
             if (tweenScale && scaleX && !scaleY && !scaleZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (x) => t.localScale = new Vector3(x, t.localScale.y, t.localScale.z),
-                    keyValuePairsA.ToDictionary(k => k.key, v => v.value),
-                    animationParams,
-                    keysCurveMode
+                    Transform.gameObject,
+                    (x) => Transform.localScale = new Vector3(x, Transform.localScale.y, Transform.localScale.z),
+                    scaleKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
+                    scaleAnimationParams,
+                    scaleKeysCurveMode
                 );
             }
             else if (tweenScale && !scaleX && scaleY && !scaleZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (y) => t.localScale = new Vector3(t.localScale.x, y, t.localScale.z),
-                    keyValuePairsA.ToDictionary(k => k.key, v => v.value),
-                    animationParams,
-                    keysCurveMode
+                    Transform.gameObject,
+                    (y) => Transform.localScale = new Vector3(Transform.localScale.x, y, Transform.localScale.z),
+                    scaleKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
+                    scaleAnimationParams,
+                    scaleKeysCurveMode
                 );
             }
             else if (tweenScale && !scaleX && !scaleY && scaleZ)
             {
                 Utween.AnimateFloat(
-                    gameObject,
-                    (z) => t.localScale = new Vector3(t.localScale.x, t.localScale.y, z),
-                    keyValuePairsA.ToDictionary(k => k.key, v => v.value),
-                    animationParams,
-                    keysCurveMode
+                    Transform.gameObject,
+                    (z) => Transform.localScale = new Vector3(Transform.localScale.x, Transform.localScale.y, z),
+                    scaleKeyValuePairsA.ToDictionary(k => k.key, v => v.value),
+                    scaleAnimationParams,
+                    scaleKeysCurveMode
                 );
             }
 
             else if (tweenScale && scaleX && scaleY && !scaleZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (x, y) => t.localScale = new Vector3(x, y, t.localScale.z),
-                    keyValuePairsAB.ToDictionary(k => k.key, v => v.value),
-                    animationParams,
-                    keysCurveMode
+                    Transform.gameObject,
+                    (x, y) => Transform.localScale = new Vector3(x, y, Transform.localScale.z),
+                    scaleKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
+                    scaleAnimationParams,
+                    scaleKeysCurveMode
                 );
             }
             else if (tweenScale && scaleX && !scaleY && scaleZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (x, z) => t.localScale = new Vector3(x, t.localScale.y, z),
-                    keyValuePairsAB.ToDictionary(k => k.key, v => v.value),
-                    animationParams,
-                    keysCurveMode
+                    Transform.gameObject,
+                    (x, z) => Transform.localScale = new Vector3(x, Transform.localScale.y, z),
+                    scaleKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
+                    scaleAnimationParams,
+                    scaleKeysCurveMode
                 );
             }
             else if (tweenScale && !scaleX && scaleY && scaleZ)
             {
                 Utween.AnimateVector2(
-                    gameObject,
-                    (y, z) => t.localScale = new Vector3(t.localScale.x, y, z),
-                    keyValuePairsAB.ToDictionary(k => k.key, v => v.value),
-                    animationParams,
-                    keysCurveMode
+                    Transform.gameObject,
+                    (y, z) => Transform.localScale = new Vector3(Transform.localScale.x, y, z),
+                    scaleKeyValuePairsAB.ToDictionary(k => k.key, v => v.value),
+                    scaleAnimationParams,
+                    scaleKeysCurveMode
                 );
             }
 
             else if (tweenScale && scaleX && scaleY && scaleZ)
             {
                 Utween.AnimateVector3(
-                    gameObject,
-                    (x, y, z) => t.localScale = new Vector3(x, y, z),
-                    keyValuePairsABC.ToDictionary(k => k.key, v => v.value),
-                    animationParams,
-                    keysCurveMode
+                    Transform.gameObject,
+                    (x, y, z) => Transform.localScale = new Vector3(x, y, z),
+                    scaleKeyValuePairsABC.ToDictionary(k => k.key, v => v.value),
+                    scaleAnimationParams,
+                    scaleKeysCurveMode
                 );
             }
         }

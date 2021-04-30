@@ -10,9 +10,9 @@ namespace U.Motion
 
     // Probada
 
-    public class DoubleKeysCurve : KeysCurve<double>
+    public class DoubleKeyFramesCurve : KeyFramesCurve<double>
     {
-        public DoubleKeysCurve(Dictionary<int, double> keys, Utween.KeysCurveMode curveMode) : base(keys, curveMode) { }
+        public DoubleKeyFramesCurve(Dictionary<int, double> keys, Utween.KeysCurveMode curveMode) : base(keys, curveMode) { }
 
         protected override float GetFloatFromTValue(double value) => (float)value;
 

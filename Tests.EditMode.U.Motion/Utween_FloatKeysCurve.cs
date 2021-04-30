@@ -14,7 +14,7 @@ public class Utween_FloatKeysCurve
     public void FloatKeysCurve_CurveModeSlope()
     {
 
-        FloatKeysCurve floatKeysCurve;
+        FloatKeyFramesCurve floatKeysCurve;
         Dictionary<int, float> keyFrames;
 
 
@@ -27,7 +27,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(0f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -55,7 +55,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(0f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -83,7 +83,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -111,7 +111,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(-1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -138,7 +138,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(-1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -169,7 +169,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -200,7 +200,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(-1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -226,7 +226,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -253,7 +253,7 @@ public class Utween_FloatKeysCurve
     public void FloatKeysCurve_CurveModeStep()
     {
 
-        FloatKeysCurve floatKeysCurve;
+        FloatKeyFramesCurve floatKeysCurve;
         Dictionary<int, float> keyFrames;
 
 
@@ -266,7 +266,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(0f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -294,7 +294,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(0f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -322,7 +322,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -350,7 +350,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(-1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -377,7 +377,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(-1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -408,7 +408,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -439,7 +439,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(-1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -465,7 +465,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + floatKeysCurve.Evaluate(0));
         Assert.AreEqual(1f, floatKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + floatKeysCurve.Evaluate(.25f));
@@ -492,7 +492,7 @@ public class Utween_FloatKeysCurve
     public void FloatKeysCurve_WhenInvalidKeysPassed()
     {
 
-        FloatKeysCurve floatKeysCurve = null;
+        FloatKeyFramesCurve floatKeysCurve = null;
         Dictionary<int, float> keyFrames;
 
 
@@ -504,7 +504,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step));
 
 
 
@@ -516,7 +516,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step));
 
 
 
@@ -540,7 +540,7 @@ public class Utween_FloatKeysCurve
         };
 
         Debug.Log("--> Prueba 4:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step));
 
 
 
@@ -556,7 +556,7 @@ public class Utween_FloatKeysCurve
                 {300, 1 },
             };
 
-            floatKeysCurve = new FloatKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+            floatKeysCurve = new FloatKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
         }
         catch (Exception)
         {

@@ -10,7 +10,7 @@ namespace U.Motion
 
     // Probada
 
-    public abstract class KeysCurve<TValue>
+    public abstract class KeyFramesCurve<TValue>
     {
 
         private readonly AnimationCurve animationCurve; // The animation curve reference
@@ -25,7 +25,7 @@ namespace U.Motion
 
 
         // Constructor
-        public KeysCurve(Dictionary<int, TValue> keys, Utween.KeysCurveMode curveMode)
+        public KeyFramesCurve(Dictionary<int, TValue> keys, Utween.KeysCurveMode curveMode)
         {
 
             // Validate the values of the keys
@@ -124,7 +124,7 @@ namespace U.Motion
 
 
         // Transform to an AnimationCurve
-        public static implicit operator AnimationCurve(KeysCurve<TValue> keyCurve)
+        public static implicit operator AnimationCurve(KeyFramesCurve<TValue> keyCurve)
         {
             return keyCurve.animationCurve;
         }

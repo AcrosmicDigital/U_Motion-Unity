@@ -23,7 +23,7 @@ namespace U.Motion
 
             animator.Set(
                 animate,
-                new FloatKeysCurve(keyFrames, keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames, keysCurveMode),
                 animationParams
                 );
 
@@ -46,8 +46,8 @@ namespace U.Motion
 
             animator.Set(
                 animate,
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.x), keysCurveMode),
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.y), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.x), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.y), keysCurveMode),
                 animationParams
                 );
 
@@ -70,9 +70,9 @@ namespace U.Motion
 
             animator.Set(
                 animate,
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.x), keysCurveMode),
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.y), keysCurveMode),
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.z), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.x), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.y), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.z), keysCurveMode),
                 animationParams
                 );
 
@@ -96,10 +96,10 @@ namespace U.Motion
 
             animator.Set(
                 animate,
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.x), keysCurveMode),
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.y), keysCurveMode),
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.z), keysCurveMode),
-                new FloatKeysCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.w), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.x), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.y), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.z), keysCurveMode),
+                new FloatKeyFramesCurve(keyFrames.ToDictionary(k => k.Key, v => v.Value.w), keysCurveMode),
                 animationParams
                 );
 

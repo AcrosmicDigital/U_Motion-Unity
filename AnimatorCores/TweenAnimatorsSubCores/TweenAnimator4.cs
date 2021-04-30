@@ -7,21 +7,24 @@ using UnityEngine;
 
 namespace U.Motion
 {
-    public abstract class TweenAnimator<TValueX, TValueY, TValueZ> : TimeAnimatorCore
+    public abstract class TweenAnimator<TValueX, TValueY, TValueZ, TValueW> : TimeAnimatorCore
     {
         
-        public KeysCurve<TValueX> keysCurveX; // Values that the animation will take in the curve
-        public KeysCurve<TValueY> keysCurveY; // Values that the animation will take in the curve
-        public KeysCurve<TValueZ> keysCurveZ; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueX> keysCurveX; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueY> keysCurveY; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueZ> keysCurveZ; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueW> keysCurveW; // Values that the animation will take in the curve
 
-        public Action<TValueX, TValueY, TValueZ> animate;
+
+        public Action<TValueX, TValueY, TValueZ, TValueW> animate;
 
 
         public void Set(
-            Action<TValueX, TValueY, TValueZ> animate,
-            KeysCurve<TValueX> keysCurveX,
-            KeysCurve<TValueY> keysCurveY,
-            KeysCurve<TValueZ> keysCurveZ,
+            Action<TValueX, TValueY, TValueZ, TValueW> animate,
+            KeyFramesCurve<TValueX> keysCurveX,
+            KeyFramesCurve<TValueY> keysCurveY,
+            KeyFramesCurve<TValueZ> keysCurveZ,
+            KeyFramesCurve<TValueW> keysCurveW,
             TimeAnimationParams animationParams = null
             )
         {
@@ -30,27 +33,25 @@ namespace U.Motion
             this.keysCurveX = keysCurveX;
             this.keysCurveY = keysCurveY;
             this.keysCurveZ = keysCurveZ;
+            this.keysCurveW = keysCurveW;
 
             base.Set(animationParams);
 
         }
 
-
         protected override void OnUpdate(float copletedPercentage)
         {
             animate?.Invoke(
                 keysCurveX.Evaluate(copletedPercentage), 
-                keysCurveY.Evaluate(copletedPercentage), 
-                keysCurveZ.Evaluate(copletedPercentage)
+                keysCurveY.Evaluate(copletedPercentage),
+                keysCurveZ.Evaluate(copletedPercentage),
+                keysCurveW.Evaluate(copletedPercentage)
                 );
         }
 
 
-
-
         public override List<AnimationCurve> GetCurves()
         {
-
             try
             {
                 return new List<AnimationCurve>
@@ -59,6 +60,7 @@ namespace U.Motion
                     keysCurveX,
                     keysCurveY,
                     keysCurveZ,
+                    keysCurveW,
                 };
             }
             catch (Exception)

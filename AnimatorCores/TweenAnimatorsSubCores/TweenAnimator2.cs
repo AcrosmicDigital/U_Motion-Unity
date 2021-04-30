@@ -6,31 +6,34 @@ using UnityEngine;
 
 namespace U.Motion
 {
-    public abstract class TweenAnimator<TValue> : TimeAnimatorCore
+    public abstract class TweenAnimator<TValueX, TValueY> : TimeAnimatorCore
     {
-        
-        public KeysCurve<TValue> keysCurve; // Values that the animation will take in the curve
+       
+        public KeyFramesCurve<TValueX> keysCurveX; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueY> keysCurveY; // Values that the animation will take in the curve
 
-        public Action<TValue> animate;
+        public Action<TValueX, TValueY> animate;
 
 
         public void Set(
-            Action<TValue> animate,
-            KeysCurve<TValue> keysCurve,
+            Action<TValueX, TValueY> animate,
+            KeyFramesCurve<TValueX> keysCurveX,
+            KeyFramesCurve<TValueY> keysCurveY,
             TimeAnimationParams animationParams = null
             )
         {
             
             this.animate = animate;
-            this.keysCurve = keysCurve;
+            this.keysCurveX = keysCurveX;
+            this.keysCurveY = keysCurveY;
 
             base.Set(animationParams);
-        }
 
+        }
 
         protected override void OnUpdate(float copletedPercentage)
         {
-            animate?.Invoke(keysCurve.Evaluate(copletedPercentage));
+            animate?.Invoke(keysCurveX.Evaluate(copletedPercentage), keysCurveY.Evaluate(copletedPercentage));
         }
 
 
@@ -41,15 +44,17 @@ namespace U.Motion
                 return new List<AnimationCurve>
                 {
                     config.timingCurve,
-                    keysCurve,
+                    keysCurveX,
+                    keysCurveY,
                 };
             }
             catch (Exception)
             {
                 return new List<AnimationCurve>();
             }
+
             
         }
     }
-
 }
+

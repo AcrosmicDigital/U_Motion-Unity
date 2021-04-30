@@ -14,7 +14,7 @@ public class Utween_BoolKeysCurve
     public void BoolKeysCurve_CurveModeSlope()
     {
 
-        BoolKeysCurve boolKeysCurve;
+        BoolKeyframesCurve boolKeysCurve;
         Dictionary<int, bool> keyFrames;
 
 
@@ -27,7 +27,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(false, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -55,7 +55,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(false, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -83,7 +83,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(true, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -114,7 +114,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(true, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -140,7 +140,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(true, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -167,7 +167,7 @@ public class Utween_BoolKeysCurve
     public void BoolKeysCurve_CurveModeStep()
     {
 
-        BoolKeysCurve boolKeysCurve;
+        BoolKeyframesCurve boolKeysCurve;
         Dictionary<int, bool> keyFrames;
 
 
@@ -180,7 +180,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(false, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -208,7 +208,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(false, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -236,7 +236,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(true, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -267,7 +267,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(true, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -293,7 +293,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(true, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -320,7 +320,7 @@ public class Utween_BoolKeysCurve
     public void BoolKeysCurve_WhenInvalidKeysPassed()
     {
 
-        BoolKeysCurve boolKeysCurve = null;
+        BoolKeyframesCurve boolKeysCurve = null;
         Dictionary<int, bool> keyFrames;
 
 
@@ -332,7 +332,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step));
 
 
 
@@ -344,7 +344,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step));
 
 
 
@@ -368,7 +368,7 @@ public class Utween_BoolKeysCurve
         };
 
         Debug.Log("--> Prueba 4:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step));
 
 
 
@@ -384,7 +384,7 @@ public class Utween_BoolKeysCurve
                 {300, true },
             };
 
-            boolKeysCurve = new BoolKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+            boolKeysCurve = new BoolKeyframesCurve(keyFrames, Utween.KeysCurveMode.Step);
         }
         catch (Exception)
         {

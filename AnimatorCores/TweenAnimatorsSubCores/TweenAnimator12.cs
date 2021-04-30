@@ -10,18 +10,18 @@ namespace U.Motion
     public abstract class TweenAnimator<TValueX, TValueY, TValueZ, TValueW, TValueH, TValueI, TValueJ, TValueK, TValueA, TValueB, TValueC, TValueD> : TimeAnimatorCore
     {
 
-        public KeysCurve<TValueX> keysCurveX; // Values that the animation will take in the curve
-        public KeysCurve<TValueY> keysCurveY; // Values that the animation will take in the curve
-        public KeysCurve<TValueZ> keysCurveZ; // Values that the animation will take in the curve
-        public KeysCurve<TValueW> keysCurveW; // Values that the animation will take in the curve
-        public KeysCurve<TValueH> keysCurveH; // Values that the animation will take in the curve
-        public KeysCurve<TValueI> keysCurveI; // Values that the animation will take in the curve
-        public KeysCurve<TValueJ> keysCurveJ; // Values that the animation will take in the curve
-        public KeysCurve<TValueK> keysCurveK; // Values that the animation will take in the curve
-        public KeysCurve<TValueA> keysCurveA; // Values that the animation will take in the curve
-        public KeysCurve<TValueB> keysCurveB; // Values that the animation will take in the curve
-        public KeysCurve<TValueC> keysCurveC; // Values that the animation will take in the curve
-        public KeysCurve<TValueD> keysCurveD; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueX> keysCurveX; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueY> keysCurveY; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueZ> keysCurveZ; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueW> keysCurveW; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueH> keysCurveH; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueI> keysCurveI; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueJ> keysCurveJ; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueK> keysCurveK; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueA> keysCurveA; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueB> keysCurveB; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueC> keysCurveC; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueD> keysCurveD; // Values that the animation will take in the curve
 
 
         public Action<TValueX, TValueY, TValueZ, TValueW, TValueH, TValueI, TValueJ, TValueK, TValueA, TValueB, TValueC, TValueD> animate;
@@ -29,18 +29,18 @@ namespace U.Motion
 
         public void Set(
             Action<TValueX, TValueY, TValueZ, TValueW, TValueH, TValueI, TValueJ, TValueK, TValueA, TValueB, TValueC, TValueD> animate,
-            KeysCurve<TValueX> keysCurveX,
-            KeysCurve<TValueY> keysCurveY,
-            KeysCurve<TValueZ> keysCurveZ,
-            KeysCurve<TValueW> keysCurveW,
-            KeysCurve<TValueH> keysCurveH,
-            KeysCurve<TValueI> keysCurveI,
-            KeysCurve<TValueJ> keysCurveJ,
-            KeysCurve<TValueK> keysCurveK,
-            KeysCurve<TValueA> keysCurveA,
-            KeysCurve<TValueB> keysCurveB,
-            KeysCurve<TValueC> keysCurveC,
-            KeysCurve<TValueD> keysCurveD,
+            KeyFramesCurve<TValueX> keysCurveX,
+            KeyFramesCurve<TValueY> keysCurveY,
+            KeyFramesCurve<TValueZ> keysCurveZ,
+            KeyFramesCurve<TValueW> keysCurveW,
+            KeyFramesCurve<TValueH> keysCurveH,
+            KeyFramesCurve<TValueI> keysCurveI,
+            KeyFramesCurve<TValueJ> keysCurveJ,
+            KeyFramesCurve<TValueK> keysCurveK,
+            KeyFramesCurve<TValueA> keysCurveA,
+            KeyFramesCurve<TValueB> keysCurveB,
+            KeyFramesCurve<TValueC> keysCurveC,
+            KeyFramesCurve<TValueD> keysCurveD,
 
             TimeAnimationParams animationParams = null
             )

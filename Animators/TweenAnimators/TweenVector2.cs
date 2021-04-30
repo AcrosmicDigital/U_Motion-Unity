@@ -12,4 +12,5 @@ namespace U.Motion
     public class TweenVector2InspectorExtension : TweenAnimatorCoreInspectorExtension { }
 
 #endif
+
 }

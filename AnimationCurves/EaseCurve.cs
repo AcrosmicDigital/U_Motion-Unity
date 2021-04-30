@@ -50,11 +50,6 @@ namespace U.Motion
         }
 
 
-
-
-
-
-
         public static EaseCurve linear => new EaseCurve(new Keyframe[]
         {
             new Keyframe(0f, 0f, 0, 1),

@@ -23,7 +23,7 @@ public class Utween_EnumKeyCurve
     // Now you need to inherit KeysCurve<DataType> and create the constructor, and two methods
     // use *DataType*KeysCurve to name the new class
 
-    class ModeKeysCurve : KeysCurve<Mode>
+    class ModeKeysCurve : KeyFramesCurve<Mode>
     {
         // The constructor that accepts a Dictionary of <int, datatype>
         public ModeKeysCurve(Dictionary<int, Mode> keys, Utween.KeysCurveMode curveMode) : base(keys, curveMode) { }

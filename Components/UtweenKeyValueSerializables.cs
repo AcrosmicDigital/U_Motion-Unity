@@ -9,6 +9,7 @@ namespace U.Motion
 {
     public static partial class Utween
     {
+
         [Serializable]
         public struct KeyValueFloat
         {
