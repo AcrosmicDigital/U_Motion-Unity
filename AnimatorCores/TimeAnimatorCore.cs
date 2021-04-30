@@ -206,12 +206,25 @@ namespace U.Motion
             if (IsCompleted || !IsSet)
                 return;
 
-            IsCompleted = true;
-            Error = new Exception("Component or GameObject was destroyed before animation completes");
-            Debug.LogError(Error);
+            // Set error or resut if is allowed unexpected and
+            if (!config.allowUnexpectedEnd)
+            {
+                IsCompleted = true;
+                Error = new Exception("Component or GameObject was destroyed before animation completes");
+                Debug.LogError(Error);
 
-            if (!tks.Task.IsCompleted)
-                tks.SetException(Error);
+                if (!tks.Task.IsCompleted)
+                    tks.SetException(Error);
+            }
+            else
+            {
+                IsCompleted = true;
+
+                if (!tks.Task.IsCompleted)
+                    tks.SetResult(true);
+            }
+
+            
         }
 
 
