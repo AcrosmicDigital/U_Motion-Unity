@@ -40,6 +40,11 @@ namespace U.Motion
         private TaskCompletionSource<bool> tks = new TaskCompletionSource<bool>();  // Task to wait for the animation
 
 
+        private void Start()
+        {
+            IsPaused = !config.playOnAwake;
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -245,6 +250,7 @@ namespace U.Motion
             completedIterations = 0;
             delayCompleted = false;
             IsCompleted = false;
+            IsPaused = !config.playOnAwake;
             Error = null;
 
             if(tks.Task.IsCompleted)
