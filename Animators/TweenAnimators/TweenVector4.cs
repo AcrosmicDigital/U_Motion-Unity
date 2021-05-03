@@ -2,13 +2,15 @@
 
 namespace U.Motion
 {
-
-    public class TweenVector4 : TweenAnimator<float, float, float, float> { }
+    public partial class TweenAnimator
+    {
+        public class TweenVector4 : TweenAnimatorCore<float, float, float, float> { }
 
 #if UNITY_EDITOR
 
-    [CustomEditor(typeof(TweenVector4))]
-    public class TweenVector4InspectorExtension : TweenAnimatorCoreInspectorExtension { }
+        [CustomEditor(typeof(TweenVector4))]
+        public class TweenVector4InspectorExtension : TweenAnimatorCoreInspectorExtension { }
 
 #endif
+    }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace U.Motion
 {
-    public abstract class TweenAnimator<TValueX, TValueY, TValueZ, TValueW> : TimeAnimatorCore
+    public abstract class TweenAnimatorCore<TValueX, TValueY, TValueZ, TValueW> : TimeAnimatorCore
     {
         
         public KeyFramesCurve<TValueX> keysCurveX; // Values that the animation will take in the curve

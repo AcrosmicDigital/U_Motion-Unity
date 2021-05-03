@@ -14,8 +14,10 @@ namespace U.Motion
 
     public abstract class TimeAnimatorCore : MonoBehaviour
     {
+        // Properties
 
         public TimeAnimationParams config = new TimeAnimationParams();  // The config of the animation
+
 
         public float Progress 
         { 
@@ -40,10 +42,6 @@ namespace U.Motion
         private TaskCompletionSource<bool> tks = new TaskCompletionSource<bool>();  // Task to wait for the animation
 
 
-        private void Start()
-        {
-            IsPaused = !config.playOnAwake;
-        }
 
         // Update is called once per frame
         void Update()
@@ -204,6 +202,7 @@ namespace U.Motion
                 this.config = animationParams;
 
             this.IsSet = true;
+            IsPaused = !config.playOnAwake;
         }
 
         // Actions when the component is destroyed

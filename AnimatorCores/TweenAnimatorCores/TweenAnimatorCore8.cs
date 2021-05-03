@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace U.Motion
 {
-    public abstract class TweenAnimator<TValueX, TValueY, TValueZ, TValueW, TValueH> : TimeAnimatorCore
+    public abstract class TweenAnimatorCore<TValueX, TValueY, TValueZ, TValueW, TValueH, TValueI, TValueJ, TValueK> : TimeAnimatorCore
     {
 
         public KeyFramesCurve<TValueX> keysCurveX; // Values that the animation will take in the curve
@@ -15,18 +15,24 @@ namespace U.Motion
         public KeyFramesCurve<TValueZ> keysCurveZ; // Values that the animation will take in the curve
         public KeyFramesCurve<TValueW> keysCurveW; // Values that the animation will take in the curve
         public KeyFramesCurve<TValueH> keysCurveH; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueI> keysCurveI; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueJ> keysCurveJ; // Values that the animation will take in the curve
+        public KeyFramesCurve<TValueK> keysCurveK; // Values that the animation will take in the curve
 
 
-        public Action<TValueX, TValueY, TValueZ, TValueW, TValueH> animate;
+        public Action<TValueX, TValueY, TValueZ, TValueW, TValueH, TValueI, TValueJ, TValueK> animate;
 
 
         public void Set(
-            Action<TValueX, TValueY, TValueZ, TValueW, TValueH> animate,
+            Action<TValueX, TValueY, TValueZ, TValueW, TValueH, TValueI, TValueJ, TValueK> animate,
             KeyFramesCurve<TValueX> keysCurveX,
             KeyFramesCurve<TValueY> keysCurveY,
             KeyFramesCurve<TValueZ> keysCurveZ,
             KeyFramesCurve<TValueW> keysCurveW,
             KeyFramesCurve<TValueH> keysCurveH,
+            KeyFramesCurve<TValueI> keysCurveI,
+            KeyFramesCurve<TValueJ> keysCurveJ,
+            KeyFramesCurve<TValueK> keysCurveK,
             TimeAnimationParams animationParams = null
             )
         {
@@ -37,6 +43,9 @@ namespace U.Motion
             this.keysCurveZ = keysCurveZ;
             this.keysCurveW = keysCurveW;
             this.keysCurveH = keysCurveH;
+            this.keysCurveI = keysCurveI;
+            this.keysCurveJ = keysCurveJ;
+            this.keysCurveK = keysCurveK;
 
             base.Set(animationParams);
 
@@ -49,7 +58,10 @@ namespace U.Motion
                 keysCurveY.Evaluate(copletedPercentage),
                 keysCurveZ.Evaluate(copletedPercentage),
                 keysCurveW.Evaluate(copletedPercentage),
-                keysCurveH.Evaluate(copletedPercentage)
+                keysCurveH.Evaluate(copletedPercentage),
+                keysCurveI.Evaluate(copletedPercentage),
+                keysCurveJ.Evaluate(copletedPercentage),
+                keysCurveK.Evaluate(copletedPercentage)
                 );
         }
 
@@ -66,6 +78,9 @@ namespace U.Motion
                     keysCurveZ,
                     keysCurveW,
                     keysCurveH,
+                    keysCurveI,
+                    keysCurveJ,
+                    keysCurveK,
                 };
             }
             catch (Exception)
@@ -77,3 +92,4 @@ namespace U.Motion
         }
     }
 }
+

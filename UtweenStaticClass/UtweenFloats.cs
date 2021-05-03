@@ -10,7 +10,7 @@ namespace U.Motion
     public static partial class Utween
     {
 
-        public static TweenFloat AnimateFloat(
+        public static TweenAnimator.TweenFloat AnimateFloat(
             GameObject gameObject,
             Action<float> animate,
             Dictionary<int, float> keyFrames,
@@ -19,7 +19,7 @@ namespace U.Motion
             )
         {
 
-            var animator = gameObject.AddComponent<TweenFloat>();
+            var animator = gameObject.AddComponent<TweenAnimator.TweenFloat>();
 
             animator.Set(
                 animate,
@@ -33,7 +33,7 @@ namespace U.Motion
 
 
 
-        public static TweenVector2 AnimateVector2(
+        public static TweenAnimator.TweenVector2 AnimateVector2(
             GameObject gameObject,
             Action<float, float> animate,
             Dictionary<int, Vector2> keyFrames,
@@ -42,7 +42,7 @@ namespace U.Motion
             )
         {
 
-            var animator = gameObject.AddComponent<TweenVector2>();
+            var animator = gameObject.AddComponent<TweenAnimator.TweenVector2>();
 
             animator.Set(
                 animate,
@@ -57,7 +57,7 @@ namespace U.Motion
 
 
 
-        public static TweenVector3 AnimateVector3(
+        public static TweenAnimator.TweenVector3 AnimateVector3(
             GameObject gameObject,
             Action<float, float, float> animate,
             Dictionary<int, Vector3> keyFrames,
@@ -66,7 +66,7 @@ namespace U.Motion
             )
         {
 
-            var animator = gameObject.AddComponent<TweenVector3>();
+            var animator = gameObject.AddComponent<TweenAnimator.TweenVector3>();
 
             animator.Set(
                 animate,
@@ -83,7 +83,7 @@ namespace U.Motion
 
 
 
-        public static TweenVector4 AnimateVector4(
+        public static TweenAnimator.TweenVector4 AnimateVector4(
             GameObject gameObject,
             Action<float, float, float, float> animate,
             Dictionary<int, Vector4> keyFrames,
@@ -92,7 +92,7 @@ namespace U.Motion
             )
         {
 
-            var animator = gameObject.AddComponent<TweenVector4>();
+            var animator = gameObject.AddComponent<TweenAnimator.TweenVector4>();
 
             animator.Set(
                 animate,

@@ -10,7 +10,7 @@ namespace U.Motion
     public static partial class Utween
     {
 
-        public static TweenInt AnimateInt(
+        public static TweenAnimator.TweenInt AnimateInt(
             GameObject gameObject,
             Action<int> animate,
             Dictionary<int, int> keyFrames,
@@ -19,7 +19,7 @@ namespace U.Motion
             )
         {
 
-            var animator = gameObject.AddComponent<TweenInt>();
+            var animator = gameObject.AddComponent<TweenAnimator.TweenInt>();
 
             animator.Set(
                 animate,

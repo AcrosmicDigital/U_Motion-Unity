@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using U.Motion;
 
-public class Utween_TweenFloat_PlayOnAwake : MonoBehaviour
+public class Utween_TweenFloat_PlayOnAwake
 {
     [UnityTest]
     public IEnumerator TweenFloat_CheckDelay()
