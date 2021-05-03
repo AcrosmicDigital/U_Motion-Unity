@@ -16,6 +16,7 @@ namespace U.Motion
         public float duration = 2;
         public int iterations = 1;
         public float delay = 0;
+        public bool playOnAwake = true;
         public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted
         public Utween.Direction direction = Utween.Direction.Normal;
         public Utween.FillMode fillMode = Utween.FillMode.Both;

@@ -43,8 +43,10 @@ public class TweenTransform : MonoBehaviour
     public Utween.KeysCurveMode scaleKeysCurveMode;
 
 
-    void Start()
+    private void Start()
     {
+        Debug.Log("Starting delay " + gameObject.name);
+
         if (Transform == null) Transform = transform;
 
         if (transform == null) return;

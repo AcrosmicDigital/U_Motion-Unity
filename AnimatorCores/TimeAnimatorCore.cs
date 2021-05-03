@@ -88,6 +88,7 @@ namespace U.Motion
                 {
                     delayCompleted = true;
                     time -= config.delay;
+                    Debug.Log("End delay DelayCount for " + gameObject.name);
                 }
             }
             
