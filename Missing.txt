@@ -13,3 +13,10 @@
 
 
 -- Quitar los comentarios que puse para lo de ver la sincronizacion
+
+-- Quitar el campo script del siguiente
+TimeAnimatorCoreInspectorExtension
+Y poner como se hace en mis guias
+
+-- Para los FloatAnimators y eso, que se ven solo cuando esta play, poner campos que representen el porcentaje de la animacion y si esta Play o Pause y todo eso,
+Solo para mas claridad

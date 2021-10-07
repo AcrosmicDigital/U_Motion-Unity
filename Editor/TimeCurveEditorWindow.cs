@@ -9,37 +9,42 @@ using U.Motion;
 public class TimeCurveEditorWindow : EditorWindow
 {
     
-    [MenuItem("Universal/Motion/Easing Functions")]
+    [MenuItem("U/Motion/Time Curves")]
     public static void ShowWindow()
     {
-        GetWindow<TimeCurveEditorWindow>("Easing Functions");
+        GetWindow<TimeCurveEditorWindow>("Time Curves");
     }
 
 
     private void OnGUI()
     {
         GUILayout.Space(10);
-        EditorGUILayout.CurveField("Linear", EaseCurve.linear);
+        EditorGUILayout.CurveField("Linear", TimeCurve.linear);
 
         GUILayout.Space(10);
-        EditorGUILayout.CurveField("EaseIn", EaseCurve.easeIn);
-        EditorGUILayout.CurveField("EaseOut", EaseCurve.easeOut);
-        EditorGUILayout.CurveField("EaseInOut", EaseCurve.easeInOut);
+        EditorGUILayout.CurveField("EaseIn", TimeCurve.easeIn);
+        EditorGUILayout.CurveField("EaseOut", TimeCurve.easeOut);
+        EditorGUILayout.CurveField("EaseInOut", TimeCurve.easeInOut);
 
         GUILayout.Space(10);
-        EditorGUILayout.CurveField("CircIn", EaseCurve.circIn);
-        EditorGUILayout.CurveField("CircOut", EaseCurve.circOut);
-        EditorGUILayout.CurveField("CircInOut", EaseCurve.circInOut);
+        EditorGUILayout.CurveField("CircIn", TimeCurve.circIn);
+        EditorGUILayout.CurveField("CircOut", TimeCurve.circOut);
+        EditorGUILayout.CurveField("CircInOut", TimeCurve.circInOut);
 
         GUILayout.Space(10);
-        EditorGUILayout.CurveField("BounceIn", EaseCurve.bounceIn);
-        EditorGUILayout.CurveField("BounceOut", EaseCurve.bounceOut);
-        EditorGUILayout.CurveField("BounceInOut", EaseCurve.bounceInOut);
+        EditorGUILayout.CurveField("BounceIn", TimeCurve.bounceIn);
+        EditorGUILayout.CurveField("BounceOut", TimeCurve.bounceOut);
+        EditorGUILayout.CurveField("BounceInOut", TimeCurve.bounceInOut);
 
         GUILayout.Space(10);
-        EditorGUILayout.CurveField("ElasticIn", EaseCurve.elasticIn);
-        EditorGUILayout.CurveField("ElasticOut", EaseCurve.elasticOut);
-        EditorGUILayout.CurveField("ElasticInOut", EaseCurve.elasticInOut);
+        EditorGUILayout.CurveField("ElasticIn", TimeCurve.elasticIn);
+        EditorGUILayout.CurveField("ElasticOut", TimeCurve.elasticOut);
+        EditorGUILayout.CurveField("ElasticInOut", TimeCurve.elasticInOut);
+
+        GUILayout.Space(10);
+        EditorGUILayout.CurveField("Fast", TimeCurve.fast);
+        EditorGUILayout.CurveField("Sine", TimeCurve.sine);
+        EditorGUILayout.CurveField("Bisine", TimeCurve.bisine);
 
     }
 

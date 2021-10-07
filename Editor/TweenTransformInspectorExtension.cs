@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
+using U.Motion;
 
 #if UNITY_EDITOR
 
@@ -26,6 +27,8 @@ public class TweenTransformInspectorExtension : Editor
 
         TweenTransform tweenTransform = (TweenTransform)target;
 
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("t"), new GUIContent("Transform"));
+
         GUILayout.Space(10);
 
         showPosition = EditorGUILayout.Foldout(showPosition, "Tween Position");
@@ -43,27 +46,12 @@ public class TweenTransformInspectorExtension : Editor
 
                 GUILayout.Space(8);
 
-                // Animation Props
-                var propertya = serializedObject.FindProperty("positionAnimationParams");
-                int startingDepth = propertya.depth;
-                propertya.NextVisible(true);  // Move into the first child of aProp
-                do
-                {
-                    EditorGUILayout.PropertyField(propertya, true);
-                    propertya.NextVisible(false);
-                    // Quit iterating when you are back at the original depth (you've drawn all children)
-                } while (propertya.depth > startingDepth);
-                var propertyb = serializedObject.FindProperty("positionKeysCurveMode");
-                EditorGUILayout.PropertyField(propertyb, true);
-
-                GUILayout.Space(8);
-
                 // A
                 if ((tweenTransform.positionX && !tweenTransform.positionY && !tweenTransform.positionZ) ||
                     (!tweenTransform.positionX && tweenTransform.positionY && !tweenTransform.positionZ) ||
                     (!tweenTransform.positionX && !tweenTransform.positionY && tweenTransform.positionZ))
                 {
-                    var property = serializedObject.FindProperty("positionKeyValuePairsA");
+                    var property = serializedObject.FindProperty("positionTweenA");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
@@ -72,14 +60,14 @@ public class TweenTransformInspectorExtension : Editor
                     (tweenTransform.positionX && !tweenTransform.positionY && tweenTransform.positionZ) ||
                     (!tweenTransform.positionX && tweenTransform.positionY && tweenTransform.positionZ))
                 {
-                    var property = serializedObject.FindProperty("positionKeyValuePairsAB");
+                    var property = serializedObject.FindProperty("positionTweenAB");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
                 // ABC
                 if ((tweenTransform.positionX && tweenTransform.positionY && tweenTransform.positionZ))
                 {
-                    var property = serializedObject.FindProperty("positionKeyValuePairsABC");
+                    var property = serializedObject.FindProperty("positionTweenABC");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
@@ -105,27 +93,12 @@ public class TweenTransformInspectorExtension : Editor
 
                 GUILayout.Space(8);
 
-                // Animation Props
-                var propertya = serializedObject.FindProperty("rotationAnimationParams");
-                int startingDepth = propertya.depth;
-                propertya.NextVisible(true);  // Move into the first child of aProp
-                do
-                {
-                    EditorGUILayout.PropertyField(propertya, true);
-                    propertya.NextVisible(false);
-                    // Quit iterating when you are back at the original depth (you've drawn all children)
-                } while (propertya.depth > startingDepth);
-                var propertyb = serializedObject.FindProperty("rotationKeysCurveMode");
-                EditorGUILayout.PropertyField(propertyb, true);
-
-                GUILayout.Space(8);
-
                 // A
                 if ((tweenTransform.rotationX && !tweenTransform.rotationY && !tweenTransform.rotationZ) ||
                     (!tweenTransform.rotationX && tweenTransform.rotationY && !tweenTransform.rotationZ) ||
                     (!tweenTransform.rotationX && !tweenTransform.rotationY && tweenTransform.rotationZ))
                 {
-                    var property = serializedObject.FindProperty("rotationKeyValuePairsA");
+                    var property = serializedObject.FindProperty("rotationTweenA");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
@@ -134,14 +107,14 @@ public class TweenTransformInspectorExtension : Editor
                     (tweenTransform.rotationX && !tweenTransform.rotationY && tweenTransform.rotationZ) ||
                     (!tweenTransform.rotationX && tweenTransform.rotationY && tweenTransform.rotationZ))
                 {
-                    var property = serializedObject.FindProperty("rotationKeyValuePairsAB");
+                    var property = serializedObject.FindProperty("rotationTweenAB");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
                 // ABC
                 if ((tweenTransform.rotationX && tweenTransform.rotationY && tweenTransform.rotationZ))
                 {
-                    var property = serializedObject.FindProperty("rotationKeyValuePairsABC");
+                    var property = serializedObject.FindProperty("rotationTweenABC");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
@@ -167,27 +140,12 @@ public class TweenTransformInspectorExtension : Editor
 
                 GUILayout.Space(8);
 
-                // Animation Props
-                var propertya = serializedObject.FindProperty("scaleAnimationParams");
-                int startingDepth = propertya.depth;
-                propertya.NextVisible(true);  // Move into the first child of aProp
-                do
-                {
-                    EditorGUILayout.PropertyField(propertya, true);
-                    propertya.NextVisible(false);
-                    // Quit iterating when you are back at the original depth (you've drawn all children)
-                } while (propertya.depth > startingDepth);
-                var propertyb = serializedObject.FindProperty("scaleKeysCurveMode");
-                EditorGUILayout.PropertyField(propertyb, true);
-
-                GUILayout.Space(8);
-
                 // A
                 if ((tweenTransform.scaleX && !tweenTransform.scaleY && !tweenTransform.scaleZ) ||
                     (!tweenTransform.scaleX && tweenTransform.scaleY && !tweenTransform.scaleZ) ||
                     (!tweenTransform.scaleX && !tweenTransform.scaleY && tweenTransform.scaleZ))
                 {
-                    var property = serializedObject.FindProperty("scaleKeyValuePairsA");
+                    var property = serializedObject.FindProperty("scaleTweenA");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
@@ -196,14 +154,14 @@ public class TweenTransformInspectorExtension : Editor
                     (tweenTransform.scaleX && !tweenTransform.scaleY && tweenTransform.scaleZ) ||
                     (!tweenTransform.scaleX && tweenTransform.scaleY && tweenTransform.scaleZ))
                 {
-                    var property = serializedObject.FindProperty("scaleKeyValuePairsAB");
+                    var property = serializedObject.FindProperty("scaleTweenAB");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
                 // ABC
                 if ((tweenTransform.scaleX && tweenTransform.scaleY && tweenTransform.scaleZ))
                 {
-                    var property = serializedObject.FindProperty("scaleKeyValuePairsABC");
+                    var property = serializedObject.FindProperty("scaleTweenABC");
                     EditorGUILayout.PropertyField(property, true);
                 }
 
@@ -212,6 +170,15 @@ public class TweenTransformInspectorExtension : Editor
         }
 
         GUILayout.Space(10);
+
+        if (GUILayout.Button("Show Time Curves"))
+        {
+            TimeCurveEditorWindow window = (TimeCurveEditorWindow)EditorWindow.GetWindow(typeof(TimeCurveEditorWindow), false, "Time Curves");
+            window.Show();
+        }
+
+        GUILayout.Space(5);
+
         serializedObject.ApplyModifiedProperties();
 
     }
