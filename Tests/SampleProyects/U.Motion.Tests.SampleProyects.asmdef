@@ -1,0 +1,17 @@
+{
+    "name": "U.Motion.Tests.SampleProyects",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e8df8fb840ea0314ab1077e8f76dbd51",
+        "GUID:4163b6ea133503041bdb4b358949f0af"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

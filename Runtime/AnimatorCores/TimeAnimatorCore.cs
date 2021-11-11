@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using UnityEngine.Events;
 
 namespace U.Motion 
 {
@@ -12,7 +13,7 @@ namespace U.Motion
 
 
 
-    public abstract class TimeAnimatorCore : MonoBehaviour
+    public abstract class TimeAnimatorCore : MonoBehaviour, IanimatorCore
     {
         // Properties
 
@@ -27,6 +28,7 @@ namespace U.Motion
         public TimeCurve timeCurve = TimeCurve.easeInOut;
         public Utween.TimeMode timeMode = Utween.TimeMode.UnscaledDeltaTime;
         public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Disable;
+        public UnityEvent onComplete;
 
         // /Properties
 
@@ -186,6 +188,16 @@ namespace U.Motion
         // Toset the fillmode when animation is completed
         private void SetFillMode()
         {
+            // Invoke the oncomplete event
+            try
+            {
+                onComplete?.Invoke();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("U.Motion: onComplete event throw error, " + e);
+            }
+
             if (Error != null)
                 return;
 
@@ -324,7 +336,6 @@ namespace U.Motion
                 throw new Exception();
 
         }
-
 
     }
 }

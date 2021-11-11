@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Events;
 
 namespace U.Motion
 {
@@ -25,7 +26,7 @@ namespace U.Motion
                 public Utween.FillMode fillMode = Utween.FillMode.Both;
                 public TimeCurve.TimeCurveMode timeCurveMode = TimeCurve.TimeCurveMode.easeInOut;
                 public Utween.TimeMode timeMode = Utween.TimeMode.UnscaledDeltaTime;
-                public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Disable;
+                public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Destroy;
                 public Utween.KeysCurveMode keysCurveMode = Utween.KeysCurveMode.Slope;
                 public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted
 
@@ -33,6 +34,10 @@ namespace U.Motion
 
                 public Keyframe[] keyframes;
                 public Action<int> animate;  // Dont show in editor
+
+                [Space(8)]
+                public UnityEvent onComplete = new UnityEvent();
+
             }
 
 
@@ -81,6 +86,8 @@ namespace U.Motion
 
                 c.keysCurveX = keysCurveX;
                 c.animate = p.animate;
+
+                c.onComplete = p.onComplete;
 
                 return c;
             }

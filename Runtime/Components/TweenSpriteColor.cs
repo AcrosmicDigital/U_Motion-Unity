@@ -7,7 +7,7 @@ using static U.Motion.TweenAnimator;
 
 namespace U.Motion
 {
-    public class TweenSpriteColor : MonoBehaviour
+    public class TweenSpriteColor : Tween
     {
         [Space(10)]
         public SpriteRenderer c;
@@ -23,7 +23,7 @@ namespace U.Motion
 
 
         // Privs
-        TimeAnimatorCore colorAnimator;
+        IanimatorCore colorAnimator;
 
         private void Start()
         {
@@ -105,7 +105,7 @@ namespace U.Motion
 
 
 
-        public void Play()
+        public override void Play()
         {
             colorAnimator?.Play();
         }

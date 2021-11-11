@@ -7,7 +7,7 @@ using static U.Motion.TweenAnimator;
 
 namespace U.Motion
 {
-    public class TweenTransform : MonoBehaviour
+    public class TweenTransform : Tween
     {
         [Space(10)]
         public Transform t;
@@ -40,9 +40,9 @@ namespace U.Motion
         public TweenVector3.Properties scaleTweenABC;
 
         // Privs
-        TimeAnimatorCore positionAnimator;
-        TimeAnimatorCore rotationAnimator;
-        TimeAnimatorCore scaleAnimator;
+        IanimatorCore positionAnimator;
+        IanimatorCore rotationAnimator;
+        IanimatorCore scaleAnimator;
 
         private void Start()
         {
@@ -87,9 +87,6 @@ namespace U.Motion
                 }
             }
 
-
-
-
             if (tweenRotation)
             {
                 if (rotationX && !rotationY && !rotationZ)
@@ -123,9 +120,6 @@ namespace U.Motion
                     rotationAnimator = t.TweenRotationXYZ(rotationTweenABC);
                 }
             }
-
-
-
 
             if (tweenScale)
             {
@@ -182,7 +176,7 @@ namespace U.Motion
             scaleAnimator?.Play();
         }
 
-        public void PlayAll()
+        public override void Play()
         {
             positionAnimator?.Play();
             rotationAnimator?.Play();
