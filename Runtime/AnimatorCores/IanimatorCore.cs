@@ -15,5 +15,6 @@ namespace U.Motion
         void CompleteNow();
         Task Task();
         IEnumerator Coroutine();
+        bool isDestroyed { get; }
     }
 }

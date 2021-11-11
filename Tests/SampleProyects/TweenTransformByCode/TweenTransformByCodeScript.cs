@@ -9,53 +9,38 @@ public class TweenTransformByCodeScript : MonoBehaviour
     void Start()
     {
         // Tween transform By code
-        ChainAnimations();
-
-    }
-
-
-    private async void ChainAnimations()
-    {
-        await transform.TweenPositionX(new TweenAnimator.TweenFloat.Properties
+        transform.TweenPositionY(new Uanimators.TweenFloat.Properties
         {
             delay = 6,
-            duration = 3,
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            duration = 2,
+            direction = Utween.Direction.Alternate,
+            onCompleteMode = Utween.OnCompleteMode.Loop,
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe
+                new Uanimators.TweenFloat.Keyframe
                 {
                     key = 100,
-                    value = 2,
+                    value = 3,
                 }
             }
-        }).Task();
+        });
 
-        await transform.TweenPositionX(new TweenAnimator.TweenFloat.Properties
+        // Tween transform By code
+        transform.TweenScaleXY(new Uanimators.TweenVector2.Properties
         {
-            duration = 3,
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
-                {
-                    new TweenAnimator.TweenFloat.Keyframe
-                    {
-                        key = 100,
-                        value = 0,
-                    }
-                }
-        }).Task();
-
-        await transform.TweenScaleXY(new TweenAnimator.TweenVector2.Properties
-        {
-            duration = 3,
-            keyframes = new TweenAnimator.TweenVector2.Keyframe[]
+            delay = 6,
+            duration = 2,
+            direction = Utween.Direction.Alternate,
+            onCompleteMode = Utween.OnCompleteMode.Loop,
+            keyframes = new Uanimators.TweenVector2.Keyframe[]
             {
-                new TweenAnimator.TweenVector2.Keyframe
+                new Uanimators.TweenVector2.Keyframe
                 {
                     key = 100,
-                    value = new Vector2(2,2),
+                    value = new Vector2(1.5f,1.5f),
                 }
             }
-        }).Task();
+        });
 
     }
-
 }

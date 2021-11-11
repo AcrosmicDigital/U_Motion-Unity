@@ -7,7 +7,7 @@ using UnityEngine.Events;
 namespace U.Motion
 {
 
-    public partial class TweenAnimator
+    public partial class Uanimators
     {
 
         public class TweenVector2 : TweenAnimatorCore<float, float>
@@ -26,7 +26,7 @@ namespace U.Motion
                 public Utween.Direction direction = Utween.Direction.Normal;
                 public Utween.FillMode fillMode = Utween.FillMode.Both;
                 public TimeCurve.TimeCurveMode timeCurveMode = TimeCurve.TimeCurveMode.easeInOut;
-                public Utween.TimeMode timeMode = Utween.TimeMode.UnscaledDeltaTime;
+                public Utween.TimeMode timeMode = Utween.TimeMode.DeltaTime;
                 public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Destroy;
                 public Utween.KeysCurveMode keysCurveMode = Utween.KeysCurveMode.Slope;
                 public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted

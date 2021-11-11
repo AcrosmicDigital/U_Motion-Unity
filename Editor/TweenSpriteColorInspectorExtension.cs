@@ -38,7 +38,7 @@ public class TweenSpriteColorInspectorExtension : Editor
                     (!tweenColor.red && !tweenColor.green && tweenColor.blue && !tweenColor.alpha) ||
                     (!tweenColor.red && !tweenColor.green && !tweenColor.blue && tweenColor.alpha))
         {
-            var property = serializedObject.FindProperty("colorTweenA");
+            var property = serializedObject.FindProperty("tweenA");
             EditorGUILayout.PropertyField(property, true);
         }
 
@@ -49,7 +49,7 @@ public class TweenSpriteColorInspectorExtension : Editor
                     (!tweenColor.red && tweenColor.green && !tweenColor.blue && tweenColor.alpha) ||
                     (!tweenColor.red && !tweenColor.green && tweenColor.blue && tweenColor.alpha))
         {
-            var property = serializedObject.FindProperty("colorTweenAB");
+            var property = serializedObject.FindProperty("tweenAB");
             EditorGUILayout.PropertyField(property, true);
         }
 
@@ -58,13 +58,13 @@ public class TweenSpriteColorInspectorExtension : Editor
                     (tweenColor.red && tweenColor.green && !tweenColor.blue && tweenColor.alpha) ||
                     (tweenColor.red && tweenColor.green && tweenColor.blue && !tweenColor.alpha))
         {
-            var property = serializedObject.FindProperty("colorTweenABC");
+            var property = serializedObject.FindProperty("tweenABC");
             EditorGUILayout.PropertyField(property, true);
         }
 
         else if (tweenColor.red && tweenColor.green && tweenColor.blue && tweenColor.alpha)
         {
-            var property = serializedObject.FindProperty("colorTweenABCD");
+            var property = serializedObject.FindProperty("tweenABCD");
             EditorGUILayout.PropertyField(property, true);
         }
 

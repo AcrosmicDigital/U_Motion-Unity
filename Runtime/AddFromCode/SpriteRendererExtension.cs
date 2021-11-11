@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static U.Motion.TweenAnimator;
+using static U.Motion.Uanimators;
 
 namespace U.Motion
 {

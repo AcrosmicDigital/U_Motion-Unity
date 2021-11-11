@@ -218,8 +218,6 @@ GameObject:
   - component: {fileID: 1440554173}
   - component: {fileID: 1440554175}
   - component: {fileID: 1440554176}
-  - component: {fileID: 1440554178}
-  - component: {fileID: 1440554177}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -286,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440554172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.61, y: 1.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -301,30 +299,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440554172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 961f94e8e38357a44b73d9b93c866890, type: 3}
+  m_Script: {fileID: 11500000, guid: 5505ea7df0da9524f90a0b80c481bd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 0}
-  tweenPosition: 1
-  positionX: 1
-  positionY: 0
+  positionX: 0
+  positionY: 1
   positionZ: 0
   positionTweenA:
-    animationName: First Phase
+    animationName: 
     playOnAwake: 1
     delay: 6
     duration: 2
     iterations: 1
-    direction: 0
+    direction: 2
     fillMode: 3
     timeCurveMode: 3
     timeMode: 1
-    onCompleteMode: 1
+    onCompleteMode: 2
     keysCurveMode: 0
     allowUnexpectedEnd: 1
     keyframes:
     - key: 100
-      value: 1
+      value: 3
     onComplete:
       m_PersistentCalls:
         m_Calls: []
@@ -338,7 +335,7 @@ MonoBehaviour:
     fillMode: 3
     timeCurveMode: 3
     timeMode: 1
-    onCompleteMode: 1
+    onCompleteMode: 3
     keysCurveMode: 0
     allowUnexpectedEnd: 1
     keyframes: []
@@ -355,117 +352,7 @@ MonoBehaviour:
     fillMode: 3
     timeCurveMode: 3
     timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  tweenRotation: 0
-  rotationX: 0
-  rotationY: 0
-  rotationZ: 0
-  rotationTweenA:
-    animationName: 
-    playOnAwake: 1
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  rotationTweenAB:
-    animationName: 
-    playOnAwake: 1
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  rotationTweenABC:
-    animationName: 
-    playOnAwake: 1
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  tweenScale: 0
-  scaleX: 0
-  scaleY: 0
-  scaleZ: 0
-  scaleTweenA:
-    animationName: 
-    playOnAwake: 1
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  scaleTweenAB:
-    animationName: 
-    playOnAwake: 1
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  scaleTweenABC:
-    animationName: 
-    playOnAwake: 1
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
+    onCompleteMode: 3
     keysCurveMode: 0
     allowUnexpectedEnd: 1
     keyframes: []
@@ -481,127 +368,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440554172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 961f94e8e38357a44b73d9b93c866890, type: 3}
+  m_Script: {fileID: 11500000, guid: fb37fdea49cd7094197dfaad1493411a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 0}
-  tweenPosition: 0
-  positionX: 0
-  positionY: 0
-  positionZ: 0
-  positionTweenA:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  positionTweenAB:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  positionTweenABC:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  tweenRotation: 0
-  rotationX: 0
-  rotationY: 0
-  rotationZ: 0
-  rotationTweenA:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  rotationTweenAB:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  rotationTweenABC:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  tweenScale: 1
   scaleX: 1
   scaleY: 1
   scaleZ: 0
   scaleTweenA:
     animationName: 
-    playOnAwake: 0
+    playOnAwake: 1
     delay: 0
     duration: 2
     iterations: 1
@@ -609,7 +385,7 @@ MonoBehaviour:
     fillMode: 3
     timeCurveMode: 3
     timeMode: 1
-    onCompleteMode: 1
+    onCompleteMode: 3
     keysCurveMode: 0
     allowUnexpectedEnd: 1
     keyframes: []
@@ -618,26 +394,26 @@ MonoBehaviour:
         m_Calls: []
   scaleTweenAB:
     animationName: 
-    playOnAwake: 0
-    delay: 1
+    playOnAwake: 1
+    delay: 6
     duration: 2
     iterations: 1
-    direction: 0
+    direction: 2
     fillMode: 3
     timeCurveMode: 3
     timeMode: 1
-    onCompleteMode: 1
+    onCompleteMode: 2
     keysCurveMode: 0
     allowUnexpectedEnd: 1
     keyframes:
     - key: 100
-      value: {x: 2, y: 2}
+      value: {x: 1.5, y: 1.5}
     onComplete:
       m_PersistentCalls:
         m_Calls: []
   scaleTweenABC:
     animationName: 
-    playOnAwake: 0
+    playOnAwake: 1
     delay: 0
     duration: 2
     iterations: 1
@@ -645,113 +421,10 @@ MonoBehaviour:
     fillMode: 3
     timeCurveMode: 3
     timeMode: 1
-    onCompleteMode: 1
+    onCompleteMode: 3
     keysCurveMode: 0
     allowUnexpectedEnd: 1
     keyframes: []
     onComplete:
       m_PersistentCalls:
         m_Calls: []
---- !u!114 &1440554177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440554172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc2c012b6cfbfbf4bb74162804a79c5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  c: {fileID: 0}
-  red: 1
-  green: 0
-  blue: 0
-  alpha: 0
-  colorTweenA:
-    animationName: 
-    playOnAwake: 0
-    delay: 1
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes:
-    - key: 100
-      value: 0
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  colorTweenAB:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  colorTweenABC:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
-  colorTweenABCD:
-    animationName: 
-    playOnAwake: 0
-    delay: 0
-    duration: 2
-    iterations: 1
-    direction: 0
-    fillMode: 3
-    timeCurveMode: 3
-    timeMode: 1
-    onCompleteMode: 1
-    keysCurveMode: 0
-    allowUnexpectedEnd: 1
-    keyframes: []
-    onComplete:
-      m_PersistentCalls:
-        m_Calls: []
---- !u!114 &1440554178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440554172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dbb3db60bd7db54182f0aaaf580185f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  list:
-  - {fileID: 1440554175}
-  - {fileID: 1440554176}
-  - {fileID: 1440554177}

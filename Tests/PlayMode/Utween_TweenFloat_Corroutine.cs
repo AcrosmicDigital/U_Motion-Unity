@@ -26,7 +26,7 @@ public class Utween_TweenFloat_Corroutine
 
         IEnumerator Sequence()
         {
-            yield return TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+            yield return Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -34,15 +34,15 @@ public class Utween_TweenFloat_Corroutine
                     Debug.Log(x);
                     client = x;
                 },
-                keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+                keyframes = new Uanimators.TweenFloat.Keyframe[]
                 {
-                    new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                    new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Coroutine();
 
-            yield return TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+            yield return Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -50,15 +50,15 @@ public class Utween_TweenFloat_Corroutine
                     Debug.Log(x);
                     client2 = x;
                 },
-                keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+                keyframes = new Uanimators.TweenFloat.Keyframe[]
                 {
-                    new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                    new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Coroutine();
 
-            yield return TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+            yield return Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -66,11 +66,11 @@ public class Utween_TweenFloat_Corroutine
                     Debug.Log(x);
                     client3 = x;
                 },
-                keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+                keyframes = new Uanimators.TweenFloat.Keyframe[]
                 {
-                    new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                    new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Coroutine();
         }
@@ -123,7 +123,7 @@ public class Utween_TweenFloat_Corroutine
         // A Function to create the animations
         IEnumerator Sequence()
         {
-            var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+            var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -131,11 +131,11 @@ public class Utween_TweenFloat_Corroutine
                     Debug.Log(x);
                     client = x;
                 },
-                keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+                keyframes = new Uanimators.TweenFloat.Keyframe[]
                 {
-                    new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                    new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             });
 

@@ -6,108 +6,108 @@ using UnityEngine.Events;
 
 namespace U.Motion
 {
-    //public partial class TweenAnimator
-    //{
-    public class TweenBool : TweenAnimatorCore<bool>
+    public partial class Uanimators
     {
-
-        #region Factory
-
-        [Serializable]
-        public class Properties
+        public class TweenBool : TweenAnimatorCore<bool>
         {
-            public string animationName = "";
-            public bool playOnAwake = true;
-            public float delay = 0;
-            public float duration = 2;
-            public int iterations = 1;
-            public Utween.Direction direction = Utween.Direction.Normal;
-            public Utween.FillMode fillMode = Utween.FillMode.Both;
-            public TimeCurve.TimeCurveMode timeCurveMode = TimeCurve.TimeCurveMode.easeInOut;
-            public Utween.TimeMode timeMode = Utween.TimeMode.UnscaledDeltaTime;
-            public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Destroy;
-            public Utween.KeysCurveMode keysCurveMode = Utween.KeysCurveMode.Step;
-            public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted
 
-            [Space(8)]
+            #region Factory
 
-            public Keyframe[] keyframes;
-            public Action<bool> animate;   // Dont show in editor
+            [Serializable]
+            public class Properties
+            {
+                public string animationName = "";
+                public bool playOnAwake = true;
+                public float delay = 0;
+                public float duration = 2;
+                public int iterations = 1;
+                public Utween.Direction direction = Utween.Direction.Normal;
+                public Utween.FillMode fillMode = Utween.FillMode.Both;
+                public TimeCurve.TimeCurveMode timeCurveMode = TimeCurve.TimeCurveMode.easeInOut;
+                public Utween.TimeMode timeMode = Utween.TimeMode.DeltaTime;
+                public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Destroy;
+                public Utween.KeysCurveMode keysCurveMode = Utween.KeysCurveMode.Step;
+                public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted
 
-            [Space(8)]
-            public UnityEvent onComplete = new UnityEvent();
+                [Space(8)]
+
+                public Keyframe[] keyframes;
+                public Action<bool> animate;   // Dont show in editor
+
+                [Space(8)]
+                public UnityEvent onComplete = new UnityEvent();
+
+            }
+
+
+            [Serializable]
+            public class Keyframe
+            {
+                public int key;
+                public bool value;
+            }
+
+
+
+            public static TweenBool AddComponent(GameObject gameObject, Properties p)
+            {
+                if (p == null)
+                    throw new ArgumentNullException("Tween properties cant be null");
+
+                if (gameObject == null)
+                    throw new ArgumentNullException("GameObject cant be null");
+
+                if (p.duration <= 0)
+                    throw new ArgumentException("Duration must be grater thar 0");
+
+                if (p.delay < 0)
+                    throw new ArgumentException("Delay must be 0 or grater");
+
+                if (p.iterations <= 0)
+                    throw new ArgumentException("Iterations must be grater thar 0");
+
+
+
+                // Create the Keys Curves
+                var keysCurveX = new BoolKeyframesCurve(p.keyframes.ToDictionary(k => k.key, v => v.value), p.keysCurveMode);
+
+
+                var c = gameObject.AddComponent<TweenBool>();
+
+                c.animationName = p.animationName;
+                c.playOnAwake = p.playOnAwake;
+                c.delay = p.delay;
+                c.duration = p.duration;
+                c.iterations = p.iterations;
+                c.direction = p.direction;
+                c.fillMode = p.fillMode;
+                c.timeCurve = TimeCurve.SelectTimeCurve(p.timeCurveMode);
+                c.timeMode = p.timeMode;
+                c.onCompleteMode = p.onCompleteMode;
+                c.allowUnexpectedEnd = p.allowUnexpectedEnd;
+
+
+                c.keysCurveX = keysCurveX;
+                c.animate = p.animate;
+
+                c.onComplete = p.onComplete;
+
+                return c;
+            }
+
+            #endregion
 
         }
-
-
-        [Serializable]
-        public class Keyframe
-        {
-            public int key;
-            public bool value;
-        }
-
-
-
-        public static TweenBool AddComponent(GameObject gameObject, Properties p)
-        {
-            if (p == null)
-                throw new ArgumentNullException("Tween properties cant be null");
-
-            if (gameObject == null)
-                throw new ArgumentNullException("GameObject cant be null");
-
-            if (p.duration <= 0)
-                throw new ArgumentException("Duration must be grater thar 0");
-
-            if (p.delay < 0)
-                throw new ArgumentException("Delay must be 0 or grater");
-
-            if (p.iterations <= 0)
-                throw new ArgumentException("Iterations must be grater thar 0");
-
-
-
-            // Create the Keys Curves
-            var keysCurveX = new BoolKeyframesCurve(p.keyframes.ToDictionary(k => k.key, v => v.value), p.keysCurveMode);
-
-
-            var c = gameObject.AddComponent<TweenBool>();
-
-            c.animationName = p.animationName;
-            c.playOnAwake = p.playOnAwake;
-            c.delay = p.delay;
-            c.duration = p.duration;
-            c.iterations = p.iterations;
-            c.direction = p.direction;
-            c.fillMode = p.fillMode;
-            c.timeCurve = TimeCurve.SelectTimeCurve(p.timeCurveMode);
-            c.timeMode = p.timeMode;
-            c.onCompleteMode = p.onCompleteMode;
-            c.allowUnexpectedEnd = p.allowUnexpectedEnd;
-
-
-            c.keysCurveX = keysCurveX;
-            c.animate = p.animate;
-
-            c.onComplete = p.onComplete;
-
-            return c;
-        }
-
-        #endregion
-
-    }
 
 #if UNITY_EDITOR
 
-    [CustomEditor(typeof(TweenBool))]
-    public class TweenBoolInspectorExtension : TimeAnimatorCoreInspectorExtension { }
+        [CustomEditor(typeof(TweenBool))]
+        public class TweenBoolInspectorExtension : TimeAnimatorCoreInspectorExtension { }
 
 
 #endif
 
-    //}
+    }
 
 }
 

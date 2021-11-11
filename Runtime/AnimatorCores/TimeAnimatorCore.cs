@@ -47,6 +47,9 @@ namespace U.Motion
         public Exception Error { get; private set; } = null;  // If the animation produce an error
         public bool IsCompleted { get; private set; } = false;  // If the animation is completed or an error was thrown
 
+        public bool IsDestroyed = false;
+        public bool isDestroyed => IsDestroyed;
+
         private float copletedPercentage = 0;  // Completed percentage of an animation iteration
         private float time = 0; // Current time elapsed
         private int completedIterations = 0; // Current completed iterations
@@ -226,6 +229,8 @@ namespace U.Motion
         // Actions when the component is destroyed
         private void OnDestroy()
         {
+            IsDestroyed = true;
+
             if (IsCompleted)
                 return;
 

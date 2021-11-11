@@ -17,7 +17,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -25,11 +25,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
         });
 
@@ -56,7 +56,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -64,11 +64,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
         });
 
@@ -97,7 +97,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -105,11 +105,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             onCompleteMode = Utween.OnCompleteMode.Destroy,
         });
@@ -137,7 +137,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -145,11 +145,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             onCompleteMode = Utween.OnCompleteMode.Destroy,
         });
@@ -179,7 +179,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -187,11 +187,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             onCompleteMode = Utween.OnCompleteMode.Loop,
         });
@@ -211,7 +211,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -219,11 +219,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             onCompleteMode = Utween.OnCompleteMode.Loop,
         });
@@ -250,7 +250,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -258,11 +258,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             onCompleteMode = Utween.OnCompleteMode.None,
         });
@@ -290,7 +290,7 @@ public class Utween_TweenFloat_OnCompleteMode
         float client = 0;
 
         // Create the animation
-        var animation = TweenAnimator.TweenFloat.AddComponent(new GameObject("Host"), new TweenAnimator.TweenFloat.Properties
+        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -298,11 +298,11 @@ public class Utween_TweenFloat_OnCompleteMode
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new TweenAnimator.TweenFloat.Keyframe[]
+            keyframes = new Uanimators.TweenFloat.Keyframe[]
             {
-                new TweenAnimator.TweenFloat.Keyframe {key = 0, value = client},
-                new TweenAnimator.TweenFloat.Keyframe {key = 50, value = 3f},
-                new TweenAnimator.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             onCompleteMode = Utween.OnCompleteMode.None,
         });
