@@ -71,7 +71,6 @@ namespace U.Motion
                 // Create the Keys Curves
                 var keysCurveX = new FloatKeyFramesCurve(p.keyframes.ToDictionary(k => k.key, v => v.value), p.keysCurveMode);
 
-
                 var c = gameObject.AddComponent<TweenFloat>();
 
                 c.animationName = p.animationName;
@@ -97,13 +96,6 @@ namespace U.Motion
             #endregion
 
         }
-
-#if UNITY_EDITOR
-
-        [CustomEditor(typeof(TweenFloat))]
-        public class TweenFloatInspectorExtension : TimeAnimatorCoreInspectorExtension { }
-
-#endif
 
     }
 }

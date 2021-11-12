@@ -32,22 +32,19 @@ namespace U.Motion
 
         // /Properties
 
-        public float Progress 
+        public int Progress 
         { 
             get {
-                if (onCompleteMode == Utween.OnCompleteMode.Loop)
-                    return 0;
-                else if (IsCompleted)
-                    return 1;
-                else
-                    return ((completedIterations * duration) + copletedPercentage) / (iterations * duration);
+
+                if (!delayCompleted) return (int)((time / delay) * 100);
+                return (int)((time / duration) * 100);
             }
-        }  // The completed percentage of the total of iterations, if is completed = 1, if is loop = 0
+        }  
         public bool IsPaused { get; private set; } = false;  // If the animation is paused
         public Exception Error { get; private set; } = null;  // If the animation produce an error
         public bool IsCompleted { get; private set; } = false;  // If the animation is completed or an error was thrown
 
-        public bool IsDestroyed = false;
+        private bool IsDestroyed = false;
         public bool isDestroyed => IsDestroyed;
 
         private float copletedPercentage = 0;  // Completed percentage of an animation iteration
@@ -244,13 +241,15 @@ namespace U.Motion
                 if (!tks.Task.IsCompleted)
                     tks.SetException(Error);
             }
-            else
-            {
-                IsCompleted = true;
 
-                if (!tks.Task.IsCompleted)
-                    tks.SetResult(true);
-            }
+            // If object is destroyed before animation complete, Task will never end
+            //else
+            //{
+            //    IsCompleted = true;
+
+            //    if (!tks.Task.IsCompleted)
+            //        tks.SetResult(true);
+            //}
 
             
         }

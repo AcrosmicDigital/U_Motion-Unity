@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static U.Motion.Uanimators;
 
 public class TweenValueScript : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class TweenValueScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
+        TweenFloat.AddComponent(gameObject, new TweenFloat.Properties
+        {
+            animate = (p) => 
+            {
+                
+            },
+        });
     }
 
 }

@@ -104,11 +104,5 @@ namespace U.Motion
 
         }
 
-#if UNITY_EDITOR
-
-        [CustomEditor(typeof(TweenVector4))]
-        public class TweenVector4InspectorExtension : TimeAnimatorCoreInspectorExtension { }
-
-#endif
     }
 }

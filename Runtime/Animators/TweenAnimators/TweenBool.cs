@@ -99,15 +99,6 @@ namespace U.Motion
 
         }
 
-#if UNITY_EDITOR
-
-        [CustomEditor(typeof(TweenBool))]
-        public class TweenBoolInspectorExtension : TimeAnimatorCoreInspectorExtension { }
-
-
-#endif
-
     }
-
 }
 

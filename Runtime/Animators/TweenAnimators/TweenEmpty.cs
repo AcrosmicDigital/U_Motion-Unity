@@ -10,20 +10,8 @@ namespace U.Motion
 
     public partial class Uanimators
     {
-        public class TweenEmpty : TimeAnimatorCore
+        public class TweenEmpty : TweenAnimatorCore
         {
-            public override List<AnimationCurve> GetCurves()
-            {
-                return new List<AnimationCurve>();
-            }
-
-            protected override void OnUpdate(float copletedPercentage)
-            {
-                // Just do delay
-            }
-
-
-
 
             #region Factory
 
@@ -78,15 +66,6 @@ namespace U.Motion
 
 
         }
-
-
-#if UNITY_EDITOR
-
-        [CustomEditor(typeof(TweenEmpty))]
-        public class TweenDelayInspectorExtension : TimeAnimatorCoreInspectorExtension { }
-
-
-#endif
 
     }
 }

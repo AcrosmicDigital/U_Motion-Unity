@@ -1,20 +1,18 @@
 using UnityEngine;
 using UnityEditor;
 
-
-#if UNITY_EDITOR
-
-public class VersionMenuButton : EditorWindow
+namespace U.Motion.Editor
 {
-
-    [MenuItem("U/Motion/Version")]
-    public static void PrintVersion()
+    public class VersionMenuButton : EditorWindow
     {
 
-        Debug.Log(" U Framework: Motion v1.0.0 for Unity");
+        [MenuItem("U/Motion/Version")]
+        public static void PrintVersion()
+        {
+
+            Debug.Log(" U Framework: Motion v1.0.0 for Unity");
+
+        }
 
     }
 }
-
-
-#endif

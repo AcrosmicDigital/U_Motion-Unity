@@ -342,7 +342,7 @@ public class Utween_TweenFloat_Exceptions
     }
 
     [UnityTest]
-    public IEnumerator TweenFloat_AllowUnexpectedEnd_TaskErrorDontThowedWhenAnimatorComponentIsDestroyed()
+    public IEnumerator TweenFloat_AllowUnexpectedEnd_TaskWontBeCompleted()
     {
 
         // Host and client 
@@ -430,8 +430,8 @@ public class Utween_TweenFloat_Exceptions
         // The animation will start and delay duration * iterations
         yield return new WaitForSecondsRealtime(5f);
         Debug.Log("Task: " + tks.Exception);
-        Assert.AreEqual(20f, client2);
-        Assert.AreEqual(20f, client3);
+        Assert.AreNotEqual(20f, client2);
+        Assert.AreNotEqual(20f, client3);
 
         
 
@@ -527,7 +527,7 @@ public class Utween_TweenFloat_Exceptions
 
 
     [UnityTest]
-    public IEnumerator TweenFloat_AllowUnexpectedEnd_CorroutineDontThrowErrorWhenAnimatorComponentIsDestroyed()
+    public IEnumerator TweenFloat_AllowUnexpectedEnd_CorroutineWillNeverBeCompleted()
     {
 
         // Host and client 
@@ -603,8 +603,8 @@ public class Utween_TweenFloat_Exceptions
 
         // The animation will start and delay duration * iterations
         yield return new WaitForSecondsRealtime(5f);
-        Assert.AreEqual(20f, client2);
-        Assert.AreEqual(20f, client3);
+        Assert.AreNotEqual(20f, client2);
+        Assert.AreNotEqual(20f, client3);
 
 
     }
