@@ -5,7 +5,7 @@ using U.Motion;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class Utween_TweenFloat_FillMode
+public class Tweens_TweenFloat_FillMode
 {
 
 
@@ -17,20 +17,20 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
-            fillMode = Utween.FillMode.Backwards,
+            fillMode = Uanimation.FillMode.Backwards,
         });
 
         // The animation will start and delay duration * iterations
@@ -53,20 +53,20 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
-            fillMode = Utween.FillMode.Forwards,
+            fillMode = Uanimation.FillMode.Forwards,
         });
 
         // The animation will start and delay duration * iterations
@@ -90,20 +90,20 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
-            fillMode = Utween.FillMode.None,
+            fillMode = Uanimation.FillMode.None,
         });
 
         // The animation will start and delay duration * iterations
@@ -127,18 +127,18 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
         });
 
@@ -165,20 +165,20 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
-            fillMode = Utween.FillMode.Backwards,
+            fillMode = Uanimation.FillMode.Backwards,
         });
 
         // The animation will start and delay duration * iterations
@@ -202,20 +202,20 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
-            fillMode = Utween.FillMode.Forwards,
+            fillMode = Uanimation.FillMode.Forwards,
         });
 
         // The animation will start and delay duration * iterations
@@ -240,20 +240,20 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
-            fillMode = Utween.FillMode.None,
+            fillMode = Uanimation.FillMode.None,
         });
 
         // The animation will start and delay duration * iterations
@@ -277,21 +277,21 @@ public class Utween_TweenFloat_FillMode
         float client = 0;
 
         // Create the animation
-        var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
-            onCompleteMode = Utween.OnCompleteMode.Disable,
+            onCompleteMode = Uanimation.OnCompleteMode.Disable,
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
-            fillMode = Utween.FillMode.Backwards,
+            fillMode = Uanimation.FillMode.Backwards,
         });
 
         // The animation will start and delay duration * iterations

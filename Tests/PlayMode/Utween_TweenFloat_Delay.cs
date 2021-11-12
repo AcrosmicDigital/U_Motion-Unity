@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using U.Motion;
 
-public class Utween_TweenFloat_Delay
+public class Tweens_TweenFloat_Delay
 {
     int frameRate = 30;
 
@@ -31,7 +31,7 @@ public class Utween_TweenFloat_Delay
         // Host and client
         float client = 0;
 
-        Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties 
+        Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties 
         {
             
             animate = (x) => 
@@ -39,11 +39,11 @@ public class Utween_TweenFloat_Delay
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 3,
         });
@@ -69,7 +69,7 @@ public class Utween_TweenFloat_Delay
         // Host and client 
         float client = 0;
 
-        Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             
             animate = (x) =>
@@ -77,11 +77,11 @@ public class Utween_TweenFloat_Delay
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 10,
         });
@@ -109,7 +109,7 @@ public class Utween_TweenFloat_Delay
         // Host and client 
         float client = 0;
 
-        Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             
             animate = (x) =>
@@ -117,11 +117,11 @@ public class Utween_TweenFloat_Delay
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 10,
             duration = 5,
@@ -154,19 +154,19 @@ public class Utween_TweenFloat_Delay
         Time.timeScale = 0;
 
 
-        Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
-            timeMode = Utween.TimeMode.UnscaledDeltaTime,
+            timeMode = Uanimation.TimeMode.UnscaledDeltaTime,
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 10,
             duration = 5,
@@ -198,7 +198,7 @@ public class Utween_TweenFloat_Delay
         Time.timeScale = .5f;
 
         // Create the animation
-        Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             
             animate = (x) =>
@@ -206,15 +206,15 @@ public class Utween_TweenFloat_Delay
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 2,
             duration = 5,
-            timeMode = Utween.TimeMode.DeltaTime,
+            timeMode = Uanimation.TimeMode.DeltaTime,
         });
 
         // Because of the delay the animation will not start inmediatly
@@ -244,7 +244,7 @@ public class Utween_TweenFloat_Delay
         Application.targetFrameRate = 5;
 
 
-        Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             
             animate = (x) =>
@@ -252,11 +252,11 @@ public class Utween_TweenFloat_Delay
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 1.1f,
             duration = 1,
@@ -287,7 +287,7 @@ public class Utween_TweenFloat_Delay
         // Set the framerate .. Lower than 3, will fail, because Time.deltaTime cant be more than .333 and a lower framerate will produce more that .333 but are not displayed becouse of Unity
         Application.targetFrameRate = 3;
 
-        Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             
             animate = (x) =>
@@ -295,15 +295,15 @@ public class Utween_TweenFloat_Delay
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 1,
             duration = 5,
-            timeMode = Utween.TimeMode.DeltaTime,
+            timeMode = Uanimation.TimeMode.DeltaTime,
         });
 
         // Because of the delay the animation will not start inmediatly
@@ -329,7 +329,7 @@ public class Utween_TweenFloat_Delay
         // Host and client 
         float client = 0;
 
-        var tween = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var tween = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
             
             animate = (x) =>
@@ -337,11 +337,11 @@ public class Utween_TweenFloat_Delay
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 2,
         });
@@ -376,19 +376,19 @@ public class Utween_TweenFloat_Delay
 
 
         // Create the animation
-        var tween = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var tween = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
-            onCompleteMode = Utween.OnCompleteMode.Disable,
+            onCompleteMode = Uanimation.OnCompleteMode.Disable,
             animate = (x) =>
             {
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             delay = 2,
         });

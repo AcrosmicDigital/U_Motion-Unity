@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace U.Motion
 {
-    public partial class Uanimators
+    public partial class Uanimation
     {
         public class TweenVector3 : TweenAnimatorCore<float, float, float>
         {
@@ -21,12 +21,12 @@ namespace U.Motion
                 public float delay = 0;
                 public float duration = 2;
                 public int iterations = 1;
-                public Utween.Direction direction = Utween.Direction.Normal;
-                public Utween.FillMode fillMode = Utween.FillMode.Both;
+                public Direction direction = Direction.Normal;
+                public FillMode fillMode = FillMode.Both;
                 public TimeCurve.TimeCurveMode timeCurveMode = TimeCurve.TimeCurveMode.easeInOut;
-                public Utween.TimeMode timeMode = Utween.TimeMode.DeltaTime;
-                public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Destroy;
-                public Utween.KeysCurveMode keysCurveMode = Utween.KeysCurveMode.Slope;
+                public TimeMode timeMode = TimeMode.DeltaTime;
+                public OnCompleteMode onCompleteMode = OnCompleteMode.Destroy;
+                public KeysCurveMode keysCurveMode = KeysCurveMode.Slope;
                 public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted
 
                 [Space(8)]
@@ -35,6 +35,7 @@ namespace U.Motion
                 public Action<float, float, float> animate;  // Dont show in editor
 
                 [Space(8)]
+                public Action onCompleteAction = () => { };
                 public UnityEvent onComplete = new UnityEvent();
 
             }
@@ -93,6 +94,10 @@ namespace U.Motion
                 c.animate = p.animate;
 
                 c.onComplete = p.onComplete;
+                c.onComplete.AddListener(() => 
+                {
+                    p.onCompleteAction?.Invoke();
+                });
 
                 return c;
             }

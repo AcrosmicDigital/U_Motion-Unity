@@ -1,5 +1,5 @@
 ﻿using UnityEditor;
-using static U.Motion.Uanimators;
+using static U.Motion.Uanimation;
 
 namespace U.Motion.Editor
 {

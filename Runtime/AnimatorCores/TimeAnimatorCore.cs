@@ -23,12 +23,12 @@ namespace U.Motion
         public float delay = 0;
         public bool playOnAwake = true;
         public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted
-        public Utween.Direction direction = Utween.Direction.Normal;
-        public Utween.FillMode fillMode = Utween.FillMode.Both;
+        public Uanimation.Direction direction = Uanimation.Direction.Normal;
+        public Uanimation.FillMode fillMode = Uanimation.FillMode.Both;
         public TimeCurve timeCurve = TimeCurve.easeInOut;
-        public Utween.TimeMode timeMode = Utween.TimeMode.UnscaledDeltaTime;
-        public Utween.OnCompleteMode onCompleteMode = Utween.OnCompleteMode.Disable;
-        public UnityEvent onComplete;
+        public Uanimation.TimeMode timeMode = Uanimation.TimeMode.UnscaledDeltaTime;
+        public Uanimation.OnCompleteMode onCompleteMode = Uanimation.OnCompleteMode.Disable;
+        public UnityEvent onComplete = new UnityEvent();
 
         // /Properties
 
@@ -70,7 +70,7 @@ namespace U.Motion
 
 
             // Check for onCompleteMode 
-            if (onCompleteMode == Utween.OnCompleteMode.Loop)
+            if (onCompleteMode == Uanimation.OnCompleteMode.Loop)
             {
                 if (completedIterations > 1)
                     completedIterations = 0;
@@ -85,9 +85,9 @@ namespace U.Motion
                     if (!tks.Task.IsCompleted)
                         tks.SetResult(true);
 
-                    if (onCompleteMode == Utween.OnCompleteMode.Disable)
+                    if (onCompleteMode == Uanimation.OnCompleteMode.Disable)
                         this.enabled = false;
-                    if (onCompleteMode == Utween.OnCompleteMode.Destroy)
+                    if (onCompleteMode == Uanimation.OnCompleteMode.Destroy)
                     {
                         
                         Destroy(this);
@@ -118,16 +118,16 @@ namespace U.Motion
             // Calc the completed percentage of the animation
             if(duration > 0)
             {
-                if (direction == Utween.Direction.Reverse)
+                if (direction == Uanimation.Direction.Reverse)
                     copletedPercentage = timeCurve.Evaluate((duration - time) / duration);
 
-                else if (direction == Utween.Direction.Alternate)
+                else if (direction == Uanimation.Direction.Alternate)
                     if (completedIterations % 2 == 0)
                         copletedPercentage = timeCurve.Evaluate(time / duration);
                     else
                         copletedPercentage = timeCurve.Evaluate((duration - time) / duration);
 
-                else if (direction == Utween.Direction.AlternateReverse)
+                else if (direction == Uanimation.Direction.AlternateReverse)
                     if (completedIterations % 2 == 0)
                         copletedPercentage = timeCurve.Evaluate((duration - time) / duration);
                     else
@@ -146,7 +146,7 @@ namespace U.Motion
             // Run the OnUpdate Function
             try
             {
-                if (fillMode != Utween.FillMode.None)
+                if (fillMode != Uanimation.FillMode.None)
                     OnUpdate(copletedPercentage);
             }
             catch (Exception e)
@@ -179,7 +179,7 @@ namespace U.Motion
         // Function to add the time to a counter, time or delaytime
         private void AddTime(ref float timeCounter)
         {
-            if (timeMode == Utween.TimeMode.DeltaTime)
+            if (timeMode == Uanimation.TimeMode.DeltaTime)
                 timeCounter += Time.deltaTime;
             else
                 timeCounter += Time.unscaledDeltaTime;
@@ -203,9 +203,9 @@ namespace U.Motion
 
             try
             {
-                if (fillMode == Utween.FillMode.Backwards)
+                if (fillMode == Uanimation.FillMode.Backwards)
                     OnUpdate(0);
-                else if (fillMode == Utween.FillMode.Forwards)
+                else if (fillMode == Uanimation.FillMode.Forwards)
                     OnUpdate(1);
             }
             catch (Exception e)
@@ -300,7 +300,7 @@ namespace U.Motion
             if (IsCompleted)
                 return;
 
-            if (onCompleteMode == Utween.OnCompleteMode.Loop)
+            if (onCompleteMode == Uanimation.OnCompleteMode.Loop)
                 return;
 
             IsCompleted = true;
@@ -310,9 +310,9 @@ namespace U.Motion
             if (!tks.Task.IsCompleted)
                 tks.SetResult(true);
 
-            if (onCompleteMode == Utween.OnCompleteMode.Disable)
+            if (onCompleteMode == Uanimation.OnCompleteMode.Disable)
                 this.enabled = false;
-            if (onCompleteMode == Utween.OnCompleteMode.Destroy)
+            if (onCompleteMode == Uanimation.OnCompleteMode.Destroy)
                 Destroy(this);
 
             return;

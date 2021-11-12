@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace U.Motion
 {
-    public static partial class Utween
+    public partial class Uanimation
     {
         public enum Direction
         {

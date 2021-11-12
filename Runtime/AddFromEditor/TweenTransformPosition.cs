@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using U.Motion;
 using System.Linq;
-using static U.Motion.Uanimators;
+using static U.Motion.Uanimation;
 
 namespace U.Motion
 {

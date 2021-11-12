@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using U.Motion;
 using System.Linq;
-using static U.Motion.Uanimators;
+using static U.Motion.Uanimation;
+using UnityEngine.Events;
 
 namespace U.Motion
 {
@@ -14,6 +15,7 @@ namespace U.Motion
 
         [Header("Position")]
         public TweenEmpty.Properties tween;
+
 
         // Privs
         IanimatorCore animator;
@@ -41,7 +43,6 @@ namespace U.Motion
             if (go == null) go = gameObject;
 
             if (go == null) return;
-
 
             animator = go.TweenDelay(tween);
 

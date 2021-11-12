@@ -15,7 +15,7 @@ public class Utween_TweenFloat_PlayOnAwake
         float client = 0;
 
         // Create the animation
-        var anim = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+        var anim = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
         {
 
             animate = (x) =>
@@ -23,11 +23,11 @@ public class Utween_TweenFloat_PlayOnAwake
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimators.TweenFloat.Keyframe[]
+            keyframes = new Uanimation.TweenFloat.Keyframe[]
             {
-                new Uanimators.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
+                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
+                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
             playOnAwake = false,
         });

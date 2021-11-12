@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using U.Motion;
 using UnityEngine;
 
-public class Utween_EnumKeyCurve
+public class Tweens_EnumKeyCurve
 {
 
     // If you have an enum or any other base Type that you want to animate
@@ -26,7 +26,7 @@ public class Utween_EnumKeyCurve
     class ModeKeysCurve : KeyFramesCurve<Mode>
     {
         // The constructor that accepts a Dictionary of <int, datatype>
-        public ModeKeysCurve(Dictionary<int, Mode> keys, Utween.KeysCurveMode curveMode) : base(keys, curveMode) { }
+        public ModeKeysCurve(Dictionary<int, Mode> keys, Uanimation.KeysCurveMode curveMode) : base(keys, curveMode) { }
 
 
         // Specify how to cast from the DataTye to a float
@@ -75,7 +75,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        enumKeysCurve = new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        enumKeysCurve = new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + enumKeysCurve.Evaluate(0));
         Assert.AreEqual(Mode.First, enumKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + enumKeysCurve.Evaluate(.25f));
@@ -107,7 +107,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        enumKeysCurve = new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        enumKeysCurve = new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + enumKeysCurve.Evaluate(0));
         Assert.AreEqual(Mode.First, enumKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + enumKeysCurve.Evaluate(.25f));
@@ -133,7 +133,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        enumKeysCurve = new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        enumKeysCurve = new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + enumKeysCurve.Evaluate(0));
         Assert.AreEqual(Mode.First, enumKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + enumKeysCurve.Evaluate(.25f));
@@ -173,7 +173,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        boolKeysCurve = new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(Mode.First, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -204,7 +204,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        boolKeysCurve = new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(Mode.First, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -230,7 +230,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        boolKeysCurve = new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+        boolKeysCurve = new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + boolKeysCurve.Evaluate(0));
         Assert.AreEqual(Mode.First, boolKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + boolKeysCurve.Evaluate(.25f));
@@ -269,7 +269,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Step));
 
 
 
@@ -281,7 +281,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Step));
 
 
 
@@ -305,7 +305,7 @@ public class Utween_EnumKeyCurve
         };
 
         Debug.Log("--> Prueba 4:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Step));
 
 
 
@@ -321,7 +321,7 @@ public class Utween_EnumKeyCurve
                 {300, Mode.First },
             };
 
-            boolKeysCurve = new ModeKeysCurve(keyFrames, Utween.KeysCurveMode.Step);
+            boolKeysCurve = new ModeKeysCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         }
         catch (Exception)
         {

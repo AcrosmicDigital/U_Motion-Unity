@@ -12,7 +12,7 @@ namespace U.Motion
 
     public class BoolKeyframesCurve : KeyFramesCurve<bool>
     {
-        public BoolKeyframesCurve(Dictionary<int, bool> keys, Utween.KeysCurveMode curveMode) : base(keys, curveMode) { }
+        public BoolKeyframesCurve(Dictionary<int, bool> keys, Uanimation.KeysCurveMode curveMode) : base(keys, curveMode) { }
 
         protected override float GetFloatFromTValue(bool value)
         {

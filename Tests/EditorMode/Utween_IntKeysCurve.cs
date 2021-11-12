@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 using U.Motion;
 using System;
 
-public class Utween_IntKeysCurve
+public class Tweens_IntKeysCurve
 {
 
 
@@ -27,7 +27,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(0, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -55,7 +55,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(0, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -83,7 +83,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -111,7 +111,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(-10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -138,7 +138,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(-10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -169,7 +169,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -200,7 +200,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(-10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -226,7 +226,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Slope);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -266,7 +266,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(0, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -294,7 +294,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(0, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -322,7 +322,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -350,7 +350,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(-10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -377,7 +377,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(-10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -408,7 +408,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -439,7 +439,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(-10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -465,7 +465,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+        intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + intKeysCurve.Evaluate(0));
         Assert.AreEqual(10, intKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + intKeysCurve.Evaluate(.25f));
@@ -504,7 +504,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step));
 
 
 
@@ -516,7 +516,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step));
 
 
 
@@ -540,7 +540,7 @@ public class Utween_IntKeysCurve
         };
 
         Debug.Log("--> Prueba 4:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step));
 
 
 
@@ -556,7 +556,7 @@ public class Utween_IntKeysCurve
                 {300, 10 },
             };
 
-            intKeysCurve = new IntKeyFramesCurve(keyFrames, Utween.KeysCurveMode.Step);
+            intKeysCurve = new IntKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
         }
         catch (Exception)
         {
