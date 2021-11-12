@@ -23,6 +23,7 @@ namespace U.Motion
             Forwards,  // Last frame value will be applied on animation finish or CompleteNow
             Backwards,  // Initial keyframe value will be applied on finish or CompleteNow
             Both,  // Se quedara el valor que tiene al momento de darle CompleteNow
+
         }
 
         public enum OnCompleteMode

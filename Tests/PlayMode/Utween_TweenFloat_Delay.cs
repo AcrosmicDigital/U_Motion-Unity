@@ -156,7 +156,7 @@ public class Utween_TweenFloat_Delay
 
         Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
-            
+            timeMode = Utween.TimeMode.UnscaledDeltaTime,
             animate = (x) =>
             {
                 Debug.Log(x);
@@ -378,7 +378,7 @@ public class Utween_TweenFloat_Delay
         // Create the animation
         var tween = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
-            
+            onCompleteMode = Utween.OnCompleteMode.Disable,
             animate = (x) =>
             {
                 Debug.Log(x);

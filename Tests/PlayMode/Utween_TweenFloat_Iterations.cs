@@ -163,7 +163,7 @@ public class Utween_TweenFloat_Iterations
         // Create the animation
         var tween = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
-            
+            onCompleteMode = Utween.OnCompleteMode.Disable,
             animate = (x) =>
             {
                 Debug.Log(x);
@@ -303,7 +303,7 @@ public class Utween_TweenFloat_Iterations
         // Create the animation
         Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
-            
+
             animate = (x) =>
             {
                 Debug.Log(x);

@@ -115,7 +115,8 @@ public class Utween_TweenFloat_Task
         {
             var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
             {
-                    animate = (x) =>
+                onCompleteMode = Utween.OnCompleteMode.Disable,
+                animate = (x) =>
                     {
                         Debug.Log(x);
                         client = x;

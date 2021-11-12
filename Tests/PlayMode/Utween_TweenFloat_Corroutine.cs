@@ -8,6 +8,16 @@ using UnityEngine.TestTools;
 public class Utween_TweenFloat_Corroutine
 {
 
+    GameObject _host;
+
+    [SetUp]
+    public void SetUo()
+    {
+        Object.DestroyImmediate(_host);
+        _host = new GameObject("Host");
+    }
+
+
 
     class Amono : MonoBehaviour { }
 
@@ -18,7 +28,6 @@ public class Utween_TweenFloat_Corroutine
     {
 
         // Host and client 
-        GameObject host = new GameObject("Host");
         float client = 0;
         float client2 = 0;
         float client3 = 0;
@@ -26,9 +35,8 @@ public class Utween_TweenFloat_Corroutine
 
         IEnumerator Sequence()
         {
-            yield return Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+            yield return Uanimators.TweenFloat.AddComponent(_host, new Uanimators.TweenFloat.Properties
             {
-                
                 animate = (x) =>
                 {
                     Debug.Log(x);
@@ -42,9 +50,8 @@ public class Utween_TweenFloat_Corroutine
                 },
             }).Coroutine();
 
-            yield return Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+            yield return Uanimators.TweenFloat.AddComponent(_host, new Uanimators.TweenFloat.Properties
             {
-                
                 animate = (x) =>
                 {
                     Debug.Log(x);
@@ -58,9 +65,8 @@ public class Utween_TweenFloat_Corroutine
                 },
             }).Coroutine();
 
-            yield return Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+            yield return Uanimators.TweenFloat.AddComponent(_host, new Uanimators.TweenFloat.Properties
             {
-                
                 animate = (x) =>
                 {
                     Debug.Log(x);
@@ -77,7 +83,7 @@ public class Utween_TweenFloat_Corroutine
 
 
         // Run the animations
-        host.AddComponent<Amono>().StartCoroutine(Sequence());
+        _host.AddComponent<Amono>().StartCoroutine(Sequence());
 
 
         // The animation will start and delay duration * iterations
@@ -115,7 +121,6 @@ public class Utween_TweenFloat_Corroutine
     {
 
         // Host and client 
-        GameObject host = new GameObject("Host");
         float client = 0;
 
 
@@ -123,9 +128,9 @@ public class Utween_TweenFloat_Corroutine
         // A Function to create the animations
         IEnumerator Sequence()
         {
-            var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
+            var animation = Uanimators.TweenFloat.AddComponent(_host, new Uanimators.TweenFloat.Properties
             {
-                
+                onCompleteMode = Utween.OnCompleteMode.Disable,
                 animate = (x) =>
                 {
                     Debug.Log(x);
@@ -137,7 +142,7 @@ public class Utween_TweenFloat_Corroutine
                     new Uanimators.TweenFloat.Keyframe {key = 50, value = 3f},
                     new Uanimators.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
-            });
+            });;
 
             yield return animation.Coroutine();
 
@@ -155,7 +160,7 @@ public class Utween_TweenFloat_Corroutine
 
 
         // Run the animations
-        host.AddComponent<Amono>().StartCoroutine(Sequence());
+        _host.AddComponent<Amono>().StartCoroutine(Sequence());
 
 
 

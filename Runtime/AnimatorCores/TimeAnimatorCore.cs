@@ -266,7 +266,7 @@ namespace U.Motion
         // To Reset the animation
         public void Restart()
         {
-            this.enabled = true;
+            enabled = true;
             
             time = 0;
             completedIterations = 0;

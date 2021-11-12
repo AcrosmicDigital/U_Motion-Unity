@@ -279,6 +279,7 @@ public class Utween_TweenFloat_FillMode
         // Create the animation
         var animation = Uanimators.TweenFloat.AddComponent(new GameObject("Host"), new Uanimators.TweenFloat.Properties
         {
+            onCompleteMode = Utween.OnCompleteMode.Disable,
             animate = (x) =>
             {
                 Debug.Log(x);
