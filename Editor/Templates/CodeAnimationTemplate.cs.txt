@@ -16,13 +16,16 @@ public static partial class CodeAnimations
             // >> Finds
             //optionGo = GameObject.FindGameObjectWithTag("optionGo");
 
+            // >> Finds One Time
+            if(mainCameraGO == null) mainCameraGO = GameObject.FindGameObjectWithTag("MainCamera");
+
 
             // >> Animate
 
             // Animate the circle
 
             /*
-            GameObject.FindGameObjectWithTag("_MainSceneCircle")
+            optionGo
                 .transform.TweenPositionXY(new Uanimation.TweenVector2.Properties
                 {
                     delay = 1,
