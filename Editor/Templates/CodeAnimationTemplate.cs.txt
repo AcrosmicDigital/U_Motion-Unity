@@ -1,0 +1,53 @@
+using System;
+using U.Motion;
+using UnityEngine;
+
+public static partial class CodeAnimations
+{
+    public static partial class #SCRIPTNAME#
+    {
+
+        // Statics
+        //static GameObject optionGo;
+
+        public static void Play(Action onComplete)
+        {
+        
+            // >> Finds
+            //optionGo = GameObject.FindGameObjectWithTag("optionGo");
+
+
+            // >> Animate
+
+            // Animate the circle
+
+            /*
+            GameObject.FindGameObjectWithTag("_MainSceneCircle")
+                .transform.TweenPositionXY(new Uanimation.TweenVector2.Properties
+                {
+                    delay = 1,
+                    duration = 2,
+                    allowUnexpectedEnd = false,
+                    keyframes = new Uanimation.TweenVector2.Keyframe[]
+                    {
+                        new Uanimation.TweenVector2.Keyframe
+                        {
+                            key = 0,
+                            value = new Vector2(-0.93f, 3.55f),
+                        },
+                        new Uanimation.TweenVector2.Keyframe
+                        {
+                            key = 100,
+                            value = new Vector2(0.63f, 0.72f),
+                        },
+                    },
+
+                    // On complete chenge to next scene
+                    onCompleteAction = onComplete,
+                });
+            */
+
+        }
+
+    }
+}
