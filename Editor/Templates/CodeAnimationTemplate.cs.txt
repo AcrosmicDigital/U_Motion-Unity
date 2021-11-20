@@ -2,7 +2,7 @@ using System;
 using U.Motion;
 using UnityEngine;
 
-public static partial class CodeAnimations
+public static partial class CodeAnimations  // Dir: Assets/Scripts/CodeAnimations/*.cs
 {
     public static partial class #SCRIPTNAME#
     {
@@ -16,16 +16,13 @@ public static partial class CodeAnimations
             // >> Finds
             //optionGo = GameObject.FindGameObjectWithTag("optionGo");
 
-            // >> Finds One Time
-            if(mainCameraGO == null) mainCameraGO = GameObject.FindGameObjectWithTag("MainCamera");
-
 
             // >> Animate
 
             // Animate the circle
 
             /*
-            optionGo
+            GameObject.FindGameObjectWithTag("_MainSceneCircle")
                 .transform.TweenPositionXY(new Uanimation.TweenVector2.Properties
                 {
                     delay = 1,
