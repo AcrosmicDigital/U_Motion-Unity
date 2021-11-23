@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace U.Motion
 {
-    public partial class Uanimation
+    public partial class UAnimation
     {
         public enum Direction
         {

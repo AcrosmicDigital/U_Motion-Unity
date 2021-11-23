@@ -8,7 +8,7 @@ using UnityEngine.Events;
 namespace U.Motion
 {
 
-    public partial class Uanimation
+    public partial class UAnimation
     {
         public class TweenEmpty : TweenAnimatorCore
         {
@@ -21,8 +21,8 @@ namespace U.Motion
                 public string animationName = "";
                 public bool playOnAwake = true;
                 public float duration = 2;
-                public Uanimation.TimeMode timeMode = Uanimation.TimeMode.DeltaTime;
-                public Uanimation.OnCompleteMode onCompleteMode = Uanimation.OnCompleteMode.Destroy;
+                public UAnimation.TimeMode timeMode = UAnimation.TimeMode.DeltaTime;
+                public UAnimation.OnCompleteMode onCompleteMode = UAnimation.OnCompleteMode.Destroy;
                 public bool allowUnexpectedEnd = true; // If true no error will be throw if animation is deleted
 
                 [Space(8)]

@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace U.Motion
 {
-    public interface IanimatorCore
+    public interface IAnimatorCore
     {
         void Play();
         void Pause();
         void Restart();
         void CompleteNow();
+        void DestroyAnimation();
         Task Task();
         IEnumerator Coroutine();
         bool isDestroyed { get; }

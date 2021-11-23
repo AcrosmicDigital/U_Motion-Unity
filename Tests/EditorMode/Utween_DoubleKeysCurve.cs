@@ -29,7 +29,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(0d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -57,7 +57,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(0d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -85,7 +85,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -113,7 +113,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(-1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -140,7 +140,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(-1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -171,7 +171,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -202,7 +202,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(-1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -228,7 +228,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Slope);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Slope);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -268,7 +268,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(0d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -296,7 +296,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(0d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -324,7 +324,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -352,7 +352,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(-1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -379,7 +379,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(-1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -410,7 +410,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -441,7 +441,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 3:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(-1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -467,7 +467,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+        doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         Debug.Log("P: 0 = " + doubleKeysCurve.Evaluate(0));
         Assert.AreEqual(1d, doubleKeysCurve.Evaluate(0));
         Debug.Log("P: .25 = " + doubleKeysCurve.Evaluate(.25f));
@@ -506,7 +506,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 1:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step));
 
 
 
@@ -518,7 +518,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 2:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step));
 
 
 
@@ -542,7 +542,7 @@ public class Tweens_DoubleKeysCurve
         };
 
         Debug.Log("--> Prueba 4:");
-        Assert.Throws<ArgumentOutOfRangeException>(() => new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step));
+        Assert.Throws<ArgumentOutOfRangeException>(() => new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step));
 
 
 
@@ -558,7 +558,7 @@ public class Tweens_DoubleKeysCurve
                 {300, 1 },
             };
 
-            doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, Uanimation.KeysCurveMode.Step);
+            doubleKeysCurve = new DoubleKeyFramesCurve(keyFrames, UAnimation.KeysCurveMode.Step);
         }
         catch (Exception)
         {

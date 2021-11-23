@@ -28,7 +28,7 @@ public class Utween_TweenFloat_Exceptions
         LogAssert.Expect(LogType.Exception, "Exception: Expected exception");
 
 
-        var tween = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+        var tween = UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
         {
             animate = (x) =>
             {
@@ -36,11 +36,11 @@ public class Utween_TweenFloat_Exceptions
                 client = x;
                 throw new System.Exception("Expected exception");
             },
-            keyframes = new Uanimation.TweenFloat.Keyframe[]
+            keyframes = new UAnimation.TweenFloat.Keyframe[]
             {
-                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
         });
 
@@ -66,7 +66,7 @@ public class Utween_TweenFloat_Exceptions
         LogAssert.ignoreFailingMessages = true;
 
         // Create the animation
-        var animation = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+        var animation = UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
         {
             
             animate = (x) =>
@@ -74,11 +74,11 @@ public class Utween_TweenFloat_Exceptions
                 Debug.Log(x);
                 client = x;
             },
-            keyframes = new Uanimation.TweenFloat.Keyframe[]
+            keyframes = new UAnimation.TweenFloat.Keyframe[]
             {
-                new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
             },
         });
 
@@ -108,7 +108,7 @@ public class Utween_TweenFloat_Exceptions
         async void Sequence()
         {
             Debug.Log("Running animation with error");
-            await Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            await UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
                 {
                     
                     animate = (x) =>
@@ -116,15 +116,15 @@ public class Utween_TweenFloat_Exceptions
                         Debug.Log(x);
                         throw new System.Exception("Expected Exception");
                     },
-                    keyframes = new Uanimation.TweenFloat.Keyframe[]
+                    keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
             Debug.Log("Running animation with error");
-            await Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            await UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
                 {
                     
                     animate = (x) =>
@@ -132,15 +132,15 @@ public class Utween_TweenFloat_Exceptions
                         Debug.Log(x);
                         client2 = x;
                     },
-                    keyframes = new Uanimation.TweenFloat.Keyframe[]
+                    keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
 
-            await Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            await UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                     
                     animate = (x) =>
@@ -148,11 +148,11 @@ public class Utween_TweenFloat_Exceptions
                         Debug.Log(x);
                         client3 = x;
                     },
-                    keyframes = new Uanimation.TweenFloat.Keyframe[]
+                    keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
         }
@@ -189,7 +189,7 @@ public class Utween_TweenFloat_Exceptions
         IEnumerator Sequence()
         {
             Debug.Log("Running animation with error");
-            yield return Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            yield return UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -197,16 +197,16 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     throw new System.Exception("Expected Exception");
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Coroutine();
             Debug.Log("Running animation with error");
 
-            yield return Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            yield return UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -214,15 +214,15 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client2 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
 
-            yield return Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            yield return UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -230,11 +230,11 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client3 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
         }
@@ -273,7 +273,7 @@ public class Utween_TweenFloat_Exceptions
         async void Sequence()
         {
             Debug.Log("Running animation with error");
-            animator = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            animator = UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
 
                 animate = (x) =>
@@ -281,18 +281,18 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     throw new System.Exception("Expected Exception");
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
                 allowUnexpectedEnd = false,
             });
             await animator.Task();
             Debug.Log("Running animation with error");
 
-            await Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            await UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -300,15 +300,15 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client2 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
 
-            await Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            await UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -316,11 +316,11 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client3 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
         }
@@ -358,7 +358,7 @@ public class Utween_TweenFloat_Exceptions
         async Task Sequence()
         {
             Debug.Log("Running animation with error");
-            animator = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            animator = UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -366,11 +366,11 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     throw new System.Exception("Expected Exception");
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             });
             Debug.Log("Running animation with error");
@@ -386,7 +386,7 @@ public class Utween_TweenFloat_Exceptions
             
             Debug.Log("Running animation with error");
 
-            await Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            await UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -394,15 +394,15 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client2 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
 
-            await Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            await UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -410,11 +410,11 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client3 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
         }
@@ -455,7 +455,7 @@ public class Utween_TweenFloat_Exceptions
         IEnumerator Sequence()
         {
             Debug.Log("Running animation with error");
-            animator = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            animator = UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -463,11 +463,11 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     throw new System.Exception("Expected Exception");
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
                 allowUnexpectedEnd = false,
             });
@@ -475,7 +475,7 @@ public class Utween_TweenFloat_Exceptions
 
             Debug.Log("Running animation with error");
 
-            yield return Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            yield return UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -483,15 +483,15 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client2 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
 
-            yield return Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            yield return UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -499,11 +499,11 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client3 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
         }
@@ -542,7 +542,7 @@ public class Utween_TweenFloat_Exceptions
         IEnumerator Sequence()
         {
             Debug.Log("Running animation with error");
-            animator = Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            animator = UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -550,17 +550,17 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     throw new System.Exception("Expected Exception");
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             });
             yield return animator.Coroutine();
             Debug.Log("Running animation with error");
 
-            yield return Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            yield return UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -568,15 +568,15 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client2 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
 
-            yield return Uanimation.TweenFloat.AddComponent(new GameObject("Host"), new Uanimation.TweenFloat.Properties
+            yield return UAnimation.TweenFloat.AddComponent(new GameObject("Host"), new UAnimation.TweenFloat.Properties
             {
                 
                 animate = (x) =>
@@ -584,11 +584,11 @@ public class Utween_TweenFloat_Exceptions
                     Debug.Log(x);
                     client3 = x;
                 },
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                 {
-                    new Uanimation.TweenFloat.Keyframe {key = 0, value = client},
-                    new Uanimation.TweenFloat.Keyframe {key = 50, value = 3f},
-                    new Uanimation.TweenFloat.Keyframe {key = 100, value = 20f},
+                    new UAnimation.TweenFloat.Keyframe {key = 0, value = client},
+                    new UAnimation.TweenFloat.Keyframe {key = 50, value = 3f},
+                    new UAnimation.TweenFloat.Keyframe {key = 100, value = 20f},
                 },
             }).Task();
         }

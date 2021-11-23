@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static U.Motion.Uanimation;
+using static U.Motion.UAnimation;
 
 namespace U.Motion
 {
     public static class SpriteRendererExtension
     {
 
-        public static IanimatorCore TweenColorR(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorR(this SpriteRenderer c, TweenFloat.Properties p)
         {
             p.animate = (x) =>
             {
@@ -22,7 +22,7 @@ namespace U.Motion
             return TweenFloat.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorG(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorG(this SpriteRenderer c, TweenFloat.Properties p)
         {
             p.animate = (x) =>
             {
@@ -33,7 +33,7 @@ namespace U.Motion
             return TweenFloat.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorB(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorB(this SpriteRenderer c, TweenFloat.Properties p)
         {
             p.animate = (x) =>
             {
@@ -44,7 +44,7 @@ namespace U.Motion
             return TweenFloat.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorA(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorA(this SpriteRenderer c, TweenFloat.Properties p)
         {
             p.animate = (x) =>
             {
@@ -57,7 +57,7 @@ namespace U.Motion
 
 
 
-        public static IanimatorCore TweenColorRG(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorRG(this SpriteRenderer c, TweenVector2.Properties p)
         {
             p.animate = (x, y) =>
             {
@@ -69,7 +69,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorRB(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorRB(this SpriteRenderer c, TweenVector2.Properties p)
         {
             p.animate = (x, y) =>
             {
@@ -82,7 +82,7 @@ namespace U.Motion
 
         }
 
-        public static IanimatorCore TweenColorRA(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorRA(this SpriteRenderer c, TweenVector2.Properties p)
         {
             p.animate = (x, y) =>
             {
@@ -94,7 +94,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorGB(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorGB(this SpriteRenderer c, TweenVector2.Properties p)
         {
             p.animate = (x, y) =>
             {
@@ -106,7 +106,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorGA(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorGA(this SpriteRenderer c, TweenVector2.Properties p)
         {
             p.animate = (x, y) =>
             {
@@ -118,7 +118,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorBA(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorBA(this SpriteRenderer c, TweenVector2.Properties p)
         {
             p.animate = (x, y) =>
             {
@@ -135,7 +135,7 @@ namespace U.Motion
 
 
 
-        public static IanimatorCore TweenColorRGB(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorRGB(this SpriteRenderer c, TweenVector3.Properties p)
         {
             p.animate = (x, y, z) =>
             {
@@ -148,7 +148,7 @@ namespace U.Motion
             return TweenVector3.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorRGA(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorRGA(this SpriteRenderer c, TweenVector3.Properties p)
         {
             p.animate = (x, y, z) =>
             {
@@ -161,7 +161,7 @@ namespace U.Motion
             return TweenVector3.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorRBA(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorRBA(this SpriteRenderer c, TweenVector3.Properties p)
         {
             p.animate = (x, y, z) =>
             {
@@ -174,7 +174,7 @@ namespace U.Motion
             return TweenVector3.AddComponent(c.gameObject, p);
         }
 
-        public static IanimatorCore TweenColorGBA(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorGBA(this SpriteRenderer c, TweenVector3.Properties p)
         {
             p.animate = (x, y, z) =>
             {
@@ -190,7 +190,7 @@ namespace U.Motion
 
 
 
-        public static IanimatorCore TweenColorRGBA(this SpriteRenderer c, TweenVector4.Properties p)
+        public static IAnimatorCore TweenColorRGBA(this SpriteRenderer c, TweenVector4.Properties p)
         {
             p.animate = (x, y, z, w) =>
             {

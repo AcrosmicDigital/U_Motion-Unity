@@ -7,7 +7,7 @@ using UnityEngine.Events;
 namespace U.Motion
 {
 
-    public partial class Uanimation
+    public partial class UAnimation
     {
 
         public class TweenVector2 : TweenAnimatorCore<float, float>

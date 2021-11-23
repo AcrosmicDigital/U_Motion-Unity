@@ -16,7 +16,7 @@ public class ChainTweensByCodeScript : MonoBehaviour
 
     private async void ChainAnimations()
     {
-        await gameObject.TweenDelay(new Uanimation.TweenEmpty.Properties 
+        await gameObject.TweenDelay(new UAnimation.TweenEmpty.Properties 
         {
             duration = 6,
         }).Task();
@@ -24,12 +24,12 @@ public class ChainTweensByCodeScript : MonoBehaviour
         // Loop this tweens
         while (true)
         {
-            await transform.TweenPositionX(new Uanimation.TweenFloat.Properties
+            await transform.TweenPositionX(new UAnimation.TweenFloat.Properties
             {
                 duration = 3,
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
             {
-                new Uanimation.TweenFloat.Keyframe
+                new UAnimation.TweenFloat.Keyframe
                 {
                     key = 100,
                     value = 2,
@@ -37,12 +37,12 @@ public class ChainTweensByCodeScript : MonoBehaviour
             }
             }).Task();
 
-            await transform.TweenPositionX(new Uanimation.TweenFloat.Properties
+            await transform.TweenPositionX(new UAnimation.TweenFloat.Properties
             {
                 duration = 3,
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                     {
-                        new Uanimation.TweenFloat.Keyframe
+                        new UAnimation.TweenFloat.Keyframe
                         {
                             key = 100,
                             value = 0,
@@ -50,14 +50,14 @@ public class ChainTweensByCodeScript : MonoBehaviour
                     }
             }).Task();
 
-            await transform.TweenScaleXY(new Uanimation.TweenVector2.Properties
+            await transform.TweenScaleXY(new UAnimation.TweenVector2.Properties
             {
                 duration = 3,
-                direction = Uanimation.Direction.Alternate,
+                direction = UAnimation.Direction.Alternate,
                 iterations = 2,
-                keyframes = new Uanimation.TweenVector2.Keyframe[]
+                keyframes = new UAnimation.TweenVector2.Keyframe[]
                 {
-                    new Uanimation.TweenVector2.Keyframe
+                    new UAnimation.TweenVector2.Keyframe
                     {
                         key = 100,
                         value = new Vector2(2,2),
@@ -65,12 +65,12 @@ public class ChainTweensByCodeScript : MonoBehaviour
                 }
             }).Task();
 
-            await transform.TweenPositionX(new Uanimation.TweenFloat.Properties
+            await transform.TweenPositionX(new UAnimation.TweenFloat.Properties
             {
                 duration = 3,
-                keyframes = new Uanimation.TweenFloat.Keyframe[]
+                keyframes = new UAnimation.TweenFloat.Keyframe[]
                     {
-                        new Uanimation.TweenFloat.Keyframe
+                        new UAnimation.TweenFloat.Keyframe
                         {
                             key = 100,
                             value = -4,

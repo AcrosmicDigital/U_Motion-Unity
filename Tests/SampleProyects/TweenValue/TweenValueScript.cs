@@ -1,5 +1,5 @@
 using UnityEngine;
-using static U.Motion.Uanimation;
+using static U.Motion.UAnimation;
 
 public class TweenValueScript : MonoBehaviour
 {

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace U.Motion
 {
-    public partial class Uanimation
+    public partial class UAnimation
     {
         public class TweenFloat : TweenAnimatorCore<float>
         {

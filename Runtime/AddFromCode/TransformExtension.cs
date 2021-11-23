@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
-using static U.Motion.Uanimation;
+using static U.Motion.UAnimation;
 
 namespace U.Motion
 {
     public static class TransformExtension
     {
 
-        public static IanimatorCore TweenPositionX(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenPositionX(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -51,7 +51,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenPositionY(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenPositionY(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -90,7 +90,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenPositionZ(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenPositionZ(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -129,7 +129,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenPositionXY(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenPositionXY(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -167,7 +167,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenPositionXZ(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenPositionXZ(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -205,7 +205,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenPositionYZ(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenPositionYZ(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -243,7 +243,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenPositionXYZ(this Transform t, TweenVector3.Properties p)
+        public static IAnimatorCore TweenPositionXYZ(this Transform t, TweenVector3.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -285,7 +285,7 @@ namespace U.Motion
 
 
 
-        public static IanimatorCore TweenRotationX(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenRotationX(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -324,7 +324,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenRotationY(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenRotationY(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -363,7 +363,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenRotationZ(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenRotationZ(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -402,7 +402,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenRotationXY(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenRotationXY(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -440,7 +440,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenRotationXZ(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenRotationXZ(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -478,7 +478,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenRotationYZ(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenRotationYZ(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -516,7 +516,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenRotationXYZ(this Transform t, TweenVector3.Properties p)
+        public static IAnimatorCore TweenRotationXYZ(this Transform t, TweenVector3.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -558,7 +558,7 @@ namespace U.Motion
 
 
 
-        public static IanimatorCore TweenScaleX(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenScaleX(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -597,7 +597,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenScaleY(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenScaleY(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -636,7 +636,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenScaleZ(this Transform t, TweenFloat.Properties p)
+        public static IAnimatorCore TweenScaleZ(this Transform t, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -675,7 +675,7 @@ namespace U.Motion
         }
 
 
-        public static IanimatorCore TweenScaleXY(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenScaleXY(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -713,7 +713,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenScaleXZ(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenScaleXZ(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -751,7 +751,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenScaleYZ(this Transform t, TweenVector2.Properties p)
+        public static IAnimatorCore TweenScaleYZ(this Transform t, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -789,7 +789,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(t.gameObject, p);
         }
 
-        public static IanimatorCore TweenScaleXYZ(this Transform t, TweenVector3.Properties p)
+        public static IAnimatorCore TweenScaleXYZ(this Transform t, TweenVector3.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)

@@ -9,15 +9,15 @@ public class TweenTransformByCodeScript : MonoBehaviour
     void Start()
     {
         // Tween transform By code
-        transform.TweenPositionY(new Uanimation.TweenFloat.Properties
+        transform.TweenPositionY(new UAnimation.TweenFloat.Properties
         {
             delay = 6,
             duration = 2,
-            direction = Uanimation.Direction.Alternate,
-            onCompleteMode = Uanimation.OnCompleteMode.Loop,
-            keyframes = new Uanimation.TweenFloat.Keyframe[]
+            direction = UAnimation.Direction.Alternate,
+            onCompleteMode = UAnimation.OnCompleteMode.Loop,
+            keyframes = new UAnimation.TweenFloat.Keyframe[]
             {
-                new Uanimation.TweenFloat.Keyframe
+                new UAnimation.TweenFloat.Keyframe
                 {
                     key = 100,
                     value = 3,
@@ -26,15 +26,15 @@ public class TweenTransformByCodeScript : MonoBehaviour
         });
 
         // Tween transform By code
-        transform.TweenScaleXY(new Uanimation.TweenVector2.Properties
+        transform.TweenScaleXY(new UAnimation.TweenVector2.Properties
         {
             delay = 6,
             duration = 2,
-            direction = Uanimation.Direction.Alternate,
-            onCompleteMode = Uanimation.OnCompleteMode.Loop,
-            keyframes = new Uanimation.TweenVector2.Keyframe[]
+            direction = UAnimation.Direction.Alternate,
+            onCompleteMode = UAnimation.OnCompleteMode.Loop,
+            keyframes = new UAnimation.TweenVector2.Keyframe[]
             {
-                new Uanimation.TweenVector2.Keyframe
+                new UAnimation.TweenVector2.Keyframe
                 {
                     key = 100,
                     value = new Vector2(1.5f,1.5f),

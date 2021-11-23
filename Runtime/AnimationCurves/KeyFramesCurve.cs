@@ -25,7 +25,7 @@ namespace U.Motion
 
 
         // Constructor
-        public KeyFramesCurve(Dictionary<int, TValue> keys, Uanimation.KeysCurveMode curveMode)
+        public KeyFramesCurve(Dictionary<int, TValue> keys, UAnimation.KeysCurveMode curveMode)
         {
 
             // Validate the values of the keys
@@ -40,7 +40,7 @@ namespace U.Motion
 
 
             // Craeate the curve
-            if (curveMode == Uanimation.KeysCurveMode.Step)
+            if (curveMode == UAnimation.KeysCurveMode.Step)
                 animationCurve = CreateStepCurve(keysArray);
             else
                 animationCurve = CreateSlopeCurve(keysArray);

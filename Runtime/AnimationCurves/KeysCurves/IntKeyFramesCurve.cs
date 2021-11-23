@@ -12,7 +12,7 @@ namespace U.Motion
 
     public class IntKeyFramesCurve : KeyFramesCurve<int>
     {
-        public IntKeyFramesCurve(Dictionary<int, int> keys, Uanimation.KeysCurveMode curveMode) : base(keys, curveMode) { }
+        public IntKeyFramesCurve(Dictionary<int, int> keys, UAnimation.KeysCurveMode curveMode) : base(keys, curveMode) { }
 
         protected override float GetFloatFromTValue(int value) => (float)value;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using U.Motion;
 using System.Linq;
-using static U.Motion.Uanimation;
+using static U.Motion.UAnimation;
 
 namespace U.Motion
 {
@@ -23,8 +23,8 @@ namespace U.Motion
 
 
         // Privs
-        IanimatorCore animator;
-        IanimatorCore _animator
+        IAnimatorCore animator;
+        IAnimatorCore _animator
         {
             get
             {
