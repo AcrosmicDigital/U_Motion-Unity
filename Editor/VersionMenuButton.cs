@@ -6,7 +6,7 @@ namespace U.Motion.Editor
     public class VersionMenuButton : EditorWindow
     {
 
-        [MenuItem("U/Motion/Version")]
+        [MenuItem("Universal/Motion/Version")]
         public static void PrintVersion()
         {
 

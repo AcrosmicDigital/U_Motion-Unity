@@ -6,7 +6,7 @@ namespace U.Motion.Editor
     public class TimeCurveEditorWindow : EditorWindow
     {
 
-        [MenuItem("U/Motion/Time Curves")]
+        [MenuItem("Universal/Motion/Time Curves")]
         public static void ShowWindow()
         {
             GetWindow<TimeCurveEditorWindow>("Time Curves");
