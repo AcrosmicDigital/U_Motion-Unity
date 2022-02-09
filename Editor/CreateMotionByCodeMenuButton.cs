@@ -6,9 +6,10 @@ namespace U.Universal.Scenes.Editor
     public class CreateMotionByCodeMenuButton : EditorWindow
     {
 
-        #region MotionByCode File
-        private static string FolderName => "/Scripts/MotionByCode/";
-        private static string DefaultFileName => "NewClip";
+        #region File
+        private static string DefaultFolderName => "/Scripts/MotionByCode/";
+        private static string DefaultFileName => "New";
+        private static string CustomExtension => "mobyco";
         static string[] file(string fileName) => new string[]
         {
             "using System;",
@@ -71,7 +72,7 @@ namespace U.Universal.Scenes.Editor
             "    }",
             "}",
         };
-        #endregion TransitionClass File
+        #endregion File
 
 
 
@@ -83,7 +84,7 @@ namespace U.Universal.Scenes.Editor
         {
 
             // Create files
-            CreateFileWithSaveFilePanelForceLocation(FolderName, DefaultFileName, file, FormatLog);
+            CreateFileWithSaveFilePanelAndCustomExtension(DefaultFolderName, DefaultFileName, file, FormatLog, CustomExtension);
 
             // Compile
             AssetDatabase.Refresh();
