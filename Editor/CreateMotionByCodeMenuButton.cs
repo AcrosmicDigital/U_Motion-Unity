@@ -7,7 +7,7 @@ namespace U.Universal.Scenes.Editor
     {
 
         #region File
-        private static string DefaultFolderName => "/Scripts/MotionByCode/";
+        private static string DefaultFolderName => "/Scripts/Control/MotionByCode/";
         private static string DefaultFileName => "New";
         private static string CustomExtension => "mobyco";
         static string[] file(string fileName) => new string[]
