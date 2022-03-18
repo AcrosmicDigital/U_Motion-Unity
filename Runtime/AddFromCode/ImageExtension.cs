@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 using static U.Motion.UAnimation;
 
 namespace U.Motion
 {
-    public static class SpriteRendererExtension
+    public static class ImageExtension
     {
 
-        public static IAnimatorCore TweenColorR(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorR(this  Image c, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -52,7 +53,7 @@ namespace U.Motion
             return TweenFloat.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorG(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorG(this Image c, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -93,7 +94,7 @@ namespace U.Motion
             return TweenFloat.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorB(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorB(this Image c, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -134,7 +135,7 @@ namespace U.Motion
             return TweenFloat.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorA(this SpriteRenderer c, TweenFloat.Properties p)
+        public static IAnimatorCore TweenColorA(this Image c, TweenFloat.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -177,7 +178,7 @@ namespace U.Motion
 
 
 
-        public static IAnimatorCore TweenColorRG(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorRG(this Image c, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -219,7 +220,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorRB(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorRB(this Image c, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -262,7 +263,7 @@ namespace U.Motion
 
         }
 
-        public static IAnimatorCore TweenColorRA(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorRA(this Image c, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -304,7 +305,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorGB(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorGB(this Image c, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -346,7 +347,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorGA(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorGA(this Image c, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -388,7 +389,7 @@ namespace U.Motion
             return TweenVector2.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorBA(this SpriteRenderer c, TweenVector2.Properties p)
+        public static IAnimatorCore TweenColorBA(this Image c, TweenVector2.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -435,7 +436,7 @@ namespace U.Motion
 
 
 
-        public static IAnimatorCore TweenColorRGB(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorRGB(this Image c, TweenVector3.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -478,7 +479,7 @@ namespace U.Motion
             return TweenVector3.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorRGA(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorRGA(this Image c, TweenVector3.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -521,7 +522,7 @@ namespace U.Motion
             return TweenVector3.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorRBA(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorRBA(this Image c, TweenVector3.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -564,7 +565,7 @@ namespace U.Motion
             return TweenVector3.AddComponent(c.gameObject, p);
         }
 
-        public static IAnimatorCore TweenColorGBA(this SpriteRenderer c, TweenVector3.Properties p)
+        public static IAnimatorCore TweenColorGBA(this Image c, TweenVector3.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
@@ -610,7 +611,7 @@ namespace U.Motion
 
 
 
-        public static IAnimatorCore TweenColorRGBA(this SpriteRenderer c, TweenVector4.Properties p)
+        public static IAnimatorCore TweenColorRGBA(this Image c, TweenVector4.Properties p)
         {
             // If no start keyframe, use the current position as first frame
             if (p.keyframes != null)
