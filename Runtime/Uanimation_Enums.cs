@@ -32,6 +32,7 @@ namespace U.Motion
             Disable,  // Disable the tween component
             Loop,  // Loop the animation
             Destroy,  // Destroy the ctween component
+            DestroyGO,  // Destroy the ctween GO
         }
 
         public enum KeysCurveMode

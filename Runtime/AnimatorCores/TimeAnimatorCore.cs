@@ -92,6 +92,10 @@ namespace U.Motion
                         
                         Destroy(this);
                     }
+                    if (onCompleteMode == UAnimation.OnCompleteMode.DestroyGO)
+                    {
+                        Destroy(gameObject);
+                    }
 
                     return;
                 }
@@ -314,6 +318,8 @@ namespace U.Motion
                 this.enabled = false;
             if (onCompleteMode == UAnimation.OnCompleteMode.Destroy)
                 Destroy(this);
+            if (onCompleteMode == UAnimation.OnCompleteMode.DestroyGO)
+                Destroy(gameObject);
 
             return;
         }
